@@ -4,7 +4,7 @@
       <nav aria-labelledby="nav">
         <h2 id="nav" class="sr-only">Links</h2>
 
-        <ul class="grid w-full grid-cols-1 gap-2 leading-relaxed sm:grid-cols-2 md:grid-cols-1">
+        <ul class="w-full leading-relaxed grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-1">
           <li>
             <ExperienceLinks></ExperienceLinks>
           </li>
@@ -19,7 +19,7 @@
         </ul>
       </nav>
 
-      <section class="col-span-2 pt-10">
+      <section class="pt-10 col-span-2">
         <p class="first-letter:float-left first-letter:font-semibold first-letter:text-5xl first-letter:pt-1 first-letter:pr-3">
           Website builder since 1995.
 
@@ -69,7 +69,7 @@
             :text="section.heading">
       </SectionHeading>
 
-      <p :if="section.summary" class="max-w-screen-md mx-auto mb-10">
+      <p :if="section.summary" class="mx-auto mb-10 max-w-screen-md">
         {{ section.summary }}
       </p>
 

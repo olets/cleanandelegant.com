@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         slate: {
-          200: "#bbb",
+          // 200: "#bbb",
           300: "#7a7a7a",
           400: "#555",
           500: "#002a3a",

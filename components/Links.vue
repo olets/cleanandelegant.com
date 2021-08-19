@@ -8,11 +8,11 @@
       <li v-for="(link, i) in links"
             :key="i"
             class="my-2">
-        <a class="flex transition-colors duration-300 xitems-center group hover:text-black"
+        <a class="flex transition-colors duration-300 group hover:text-black"
               :href="link.href">
-          <span :class="`mt-px mr-2 duration-300 font-icon group-hover:text-${link.hoverColor}`">
-            <span class="sr-only">{{ `icon: ${link.iconName}` }}</span>
-            <span aria-hidden v-html="link.iconEntity"></span>
+          <span :class="`mt-px mr-2 duration-300 font-icon group-hover:text-${link.hoverColor}`"
+                aria-hidden="true">
+            <span v-html="link.iconEntity"></span>
           </span>
 
           {{ link.text }}

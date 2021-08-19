@@ -21,21 +21,18 @@
           {
             href: 'https://github.com/olets',
             hoverColor: 'pink-500',
-            iconName: 'angle brackets',
             iconEntity: '&#xe86f;',
             text: 'GitHub: Projects & Open-Source Activity',
           },
           {
             href: 'https://stackoverflow.com/users/1241736/henry',
             hoverColor: 'yellow-500',
-            iconName: 'info',
             iconEntity: '&#xe0c6;',
             text: 'Stackoverflow: Teaching & Knowledge Sharing',
           },
           {
             href: 'https://www.linkedin.com/in/henry-bley-vroman',
             hoverColor: 'blue-600',
-            iconName: 'network',
             iconEntity: '&#xe97a;',
             text: 'LinkedIn',
           },

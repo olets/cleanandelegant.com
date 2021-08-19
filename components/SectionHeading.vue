@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto text-center max-w-screen-md">
-    <div class="inline-block text-xl uppercase text-slate-300">
+  <div class="max-w-screen-md mx-auto text-center">
+    <div class="inline-block text-xl uppercase text-slate-400">
       <h2>{{ text }}</h2>
 
       <span :class="`block w-3/4 bg-${ dividerColor } opacity-50 h-1.5 w-48 mx-auto mt-6 mb-12`"></span>
