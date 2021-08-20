@@ -39,7 +39,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://google-fonts.nuxtjs.org/
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
   ],
 
   googleFonts: {
@@ -53,7 +53,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    hostname: 'https://cleanandelegant.com',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
