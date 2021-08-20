@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{208:function(t,n,e){"use strict";e.r(n);var l=e(35),component=Object(l.a)({},(function(){var t=this,n=t.$createElement;return(t._self._c||n)("em",{staticClass:"not-italic font-bold"},[t._t("default")],2)}),[],!1,null,null,null);n.default=component.exports;installComponents(component,{Em:e(208).default})}}]);
