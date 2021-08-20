@@ -114,7 +114,7 @@
           <br>
           Photo copyright &copy; 2016 Bradley Aaron Photography.
           <br>
-          All rights reserved.
+          All rights reserved
         </p>
       </div>
     </footer>
