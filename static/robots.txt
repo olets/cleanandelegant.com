@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: cgi-bin/
+Disallow: cgi-data/
+Disallow: PKGBackup/
+Disallow: /notrack.php
+
+Sitemap: http://www.cleanandelegant.com/sitemap.xml
