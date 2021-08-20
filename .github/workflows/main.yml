@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  cd:
+  build-deploy:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -34,4 +34,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: "dist"
           remoteDir: "html"
-          options: "--delete --asci"
+
