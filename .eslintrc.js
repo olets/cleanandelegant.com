@@ -15,6 +15,7 @@ module.exports = {
   ],
   plugins: [
   ],
+  "ignorePatterns": ["dist/**/*"],
   // add your custom rules here
   rules: {}
 }
