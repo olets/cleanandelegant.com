@@ -9,20 +9,20 @@
 
           <ul class="grid w-full grid-cols-1 gap-2 leading-relaxed sm:grid-cols-2 md:grid-cols-1">
             <li>
-              <Links :heading="experienceLinks.heading"
-                    :links="experienceLinks.links">
+              <Links :heading="links.experience.heading"
+                    :links="links.experience.links">
               </Links>
             </li>
 
             <li>
-              <Links :heading="contactLinks.heading"
-                    :links="contactLinks.links">
+              <Links :heading="links.contact.heading"
+                    :links="links.contact.links">
               </Links>
             </li>
 
             <li>
-              <Links :heading="profileLinks.heading"
-                    :links="profileLinks.links">
+              <Links :heading="links.profile.heading"
+                    :links="links.profile.links">
               </Links>
             </li>
           </ul>
@@ -88,44 +88,17 @@
       </section>
     </main>
 
-    <footer>
-      <div class="grid grid-cols-3 leading-relaxed mb-14">
-        <div>
-          <Links :heading="experienceLinks.heading"
-                :links="experienceLinks.links"
-                :sr-only-heading="boolTrue">
-          </Links>
-
-          <Links :heading="contactLinks.heading"
-                :links="contactLinks.links"
-                :sr-only-heading="boolTrue">
-          </Links>
-        </div>
-
-        <Links :heading="profileLinks.heading"
-              :links="profileLinks.links"
-              :sr-only-heading="boolTrue">
-        </Links>
-      </div>
-
-      <div class="text-xs leading-loose">
-        <p>
-          Site copyright &copy; {{ year }} Henry Bley-Vroman.
-          <br>
-          Photo copyright &copy; 2016 Bradley Aaron Photography.
-          <br>
-          All rights reserved
-        </p>
-      </div>
-    </footer>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+  import { links } from '../constants/links'
+
   export default {
     data() {
       return {
-        boolTrue: true,
+        links,
         sections: [
           {
             heading: 'Select CV',
@@ -150,76 +123,6 @@
             title: 'Writings table'
           },
         ],
-        contactLinks: {
-          heading: 'Contact',
-          links: [
-            {
-              href: 'mailto:olets@olets.dev',
-              hoverColor: 'green-500',
-              iconEntity: '&#xe0E6;',
-              text: 'olets@olets.dev',
-            },
-            {
-              href: 'tel:+19099922147',
-              hoverColor: 'blue-400',
-              iconEntity: '&#xe0B0;',
-              text: '909-992-2147',
-            },
-            {
-              href: 'https://www.google.com/maps/place/Kailua,+HI/@21.3919243,-158.2958003,9z/data=!4m5!3m4!1s0x7c005d0e3dc611d3:0xd9298ce0313066c2!8m2!3d21.4022222!4d-157.7394444',
-              hoverColor: 'indigo-500',
-              iconEntity: '&#xe0c8;',
-              text: 'Kailua, HI',
-            },
-          ],
-        },
-        experienceLinks: {
-          heading: 'Experience',
-          links: [
-            {
-              href: 'https://cleanandelegant.com/Henry_Bley-Vroman_resume.pdf',
-              hoverColor: 'maroon-400',
-              iconEntity: '&#xe415;',
-              text: 'Print-ready Resume',
-              textClasses: 'font-bold',
-            },
-            {
-              href: 'https://stackoverflow.com/story/henrybleyvroman',
-              hoverColor: 'yellow-500',
-              iconEntity: '&#xeA19;',
-              text: 'Story View',
-            },
-            {
-              href: 'https://stackoverflow.com/cv/henrybleyvroman',
-              hoverColor: 'yellow-500',
-              iconEntity: '&#xe896;',
-              text: 'CV View',
-            },
-          ],
-        },
-        profileLinks: {
-          heading: 'Profiles',
-          links: [
-            {
-              href: 'https://github.com/olets',
-              hoverColor: 'pink-500',
-              iconEntity: '&#xe86f;',
-              text: 'GitHub: Projects & Open-Source Activity',
-            },
-            {
-              href: 'https://stackoverflow.com/users/1241736/henry',
-              hoverColor: 'yellow-500',
-              iconEntity: '&#xe0c6;',
-              text: 'Stackoverflow: Teaching & Knowledge Sharing',
-            },
-            {
-              href: 'https://www.linkedin.com/in/henry-bley-vroman',
-              hoverColor: 'blue-600',
-              iconEntity: '&#xe97a;',
-              text: 'LinkedIn',
-            },
-          ],
-        },
         year: new Date().getFullYear(),
       }
     },
