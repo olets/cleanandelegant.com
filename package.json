@@ -30,7 +30,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "autoprefixer": "^10.3.3",
+    "autoprefixer": "^10.3.4",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
