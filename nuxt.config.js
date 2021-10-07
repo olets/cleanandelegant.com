@@ -40,6 +40,8 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-fonts',
+    // https://image.nuxtjs.org/
+    '@nuxt/image',
   ],
 
   googleFonts: {
