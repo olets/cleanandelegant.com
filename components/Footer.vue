@@ -1,6 +1,7 @@
 <template>
   <footer>
-    <div class="grid grid-cols-3 leading-relaxed mb-14">
+    <nav aria-labelledby="nav" class="grid grid-cols-3 leading-relaxed mb-14">
+      <h2 id="nav" class="sr-only">Links</h2>
       <div>
         <Links :heading="links.experience.heading"
               :links="links.experience.links"
@@ -17,7 +18,7 @@
             :links="links.profile.links"
             :sr-only-heading="true">
       </Links>
-    </div>
+    </nav>
 
     <div class="text-xs leading-loose">
       <p>
@@ -25,7 +26,7 @@
         <br>
         Photo copyright &copy; 2016 Bradley Aaron Photography.
         <br>
-        All rights reserved
+        All rights reserved.
       </p>
     </div>
   </footer>
