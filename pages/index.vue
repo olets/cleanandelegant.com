@@ -3,23 +3,7 @@
     <Header></Header>
 
     <main class="text-lg">
-      <section class="col-span-2 pt-10">
-        <p>
-          I work on <Em>Node, PHP, and Rails stacks</Em>
-          to make <Em>accessible responsive front ends</Em> for websites small and large,
-          <Em>CMS-backed</Em> or not.
-
-          I think about <Em>information architecture</Em> and presentation,
-          <Em>mentorship</Em> and knowledge sharing,
-          code reviews and <Em>team strength</Em>,
-          <Em>collaboration</Em>.
-
-          Co-chair of Viget's <Em>Diversity, Equity, and Inclusion</Em> Advisory Committee.
-
-          Skill with smallest market:
-          restoration of early 20th Century clay-court croquet courts.
-        </p>
-      </section>
+      <Intro></Intro>
 
       <section v-for="(section, index) in sections"
             :key="index"
