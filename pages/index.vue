@@ -5,20 +5,24 @@
     <main class="text-lg">
       <Intro></Intro>
 
-      <section v-for="(section, index) in sections"
+      <div v-for="(airtableSection, index) in airtableSections"
             :key="index"
             class="my-20">
-        <SectionHeading :divider-color="section.headingDividerColor"
-              :text="section.heading">
-        </SectionHeading>
+        <AirtableSection v-bind="airtableSection"></AirtableSection>
+      </div>
 
-        <p :if="section.summary" class="max-w-screen-lg mx-auto mb-10 text-center">
-          {{ section.summary }}
-        </p>
+      <section>
+        <h2 class="sr-only">Links</h2>
 
-        <AirtableEmbed :id="section.id"
-              :show-view-controls="section.showViewControls"
-              :title="section.title"></AirtableEmbed>
+        <div class="grid-cols-3 leading-relaxed sm:grid mb-14">
+          <div>
+            <IconLinkList v-bind="linkLists[0]"></IconLinkList>
+
+            <IconLinkList v-bind="linkLists[1]"></IconLinkList>
+          </div>
+
+          <IconLinkList v-bind="linkLists[2]"></IconLinkList>
+        </div>
       </section>
     </main>
 
@@ -27,25 +31,14 @@
 </template>
 
 <script>
+  import { airtableSections } from '../constants/airtableSections'
+  import { linkLists } from '../constants/linkLists'
+
   export default {
     data() {
       return {
-        sections: [
-          {
-            heading: 'Select CV',
-            headingDividerColor: 'green-700',
-            id: 'shrSQfzb1yfob4QOe',
-            summary: 'Some recent projects, sorted by date with ongoing projects first and then alphabetically.',
-            title: 'CV table'
-          },
-          {
-            heading: 'Select Writings',
-            headingDividerColor: 'green-700',
-            id: 'shrDTpZKkXftcjYOk',
-            title: 'Writings table'
-          },
-        ],
-        year: new Date().getFullYear(),
+        airtableSections,
+        linkLists,
       }
     },
   }

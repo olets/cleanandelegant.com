@@ -1,11 +1,11 @@
 // hover color classes must be safelisted in tailwind.config.js
 
-export const links = {
-  contact: {
+export const linkLists = [
+  {
     heading: 'Contact',
     links: [
       {
-        class: 'underline',
+        className: 'underline',
         href: 'mailto:olets@olets.dev',
         hoverColor: 'green-500',
         iconEntity: '&#xe0E6;',
@@ -17,11 +17,11 @@ export const links = {
       },
     ],
   },
-  experience: {
+  {
     heading: 'Experience',
     links: [
       {
-        class: 'underline',
+        className: 'underline',
         href: '/Henry_Bley-Vroman_resume.pdf',
         hoverColor: 'maroon-400',
         iconEntity: '&#xe415;',
@@ -29,7 +29,7 @@ export const links = {
         textClasses: 'font-bold',
       },
       {
-        class: 'underline',
+        className: 'underline',
         href: 'https://stackoverflow.com/story/henrybleyvroman',
         hoverColor: 'yellow-500',
         iconEntity: '&#xeA19;',
@@ -37,25 +37,25 @@ export const links = {
       },
     ],
   },
-  profile: {
+  {
     heading: 'Profiles',
     links: [
       {
-        class: 'underline',
+        className: 'underline',
         href: 'https://github.com/olets',
         hoverColor: 'pink-500',
         iconEntity: '&#xe86f;',
         text: 'GitHub projects & open-source contributions',
       },
       {
-        class: 'underline',
+        className: 'underline',
         href: 'https://stackoverflow.com/users/1241736/henry',
         hoverColor: 'yellow-500',
         iconEntity: '&#xe0c6;',
         text: 'Stackoverflow activity',
       },
       {
-        class: 'underline',
+        className: 'underline',
         href: 'https://www.linkedin.com/in/henry-bley-vroman',
         hoverColor: 'blue-600',
         iconEntity: '&#xe97a;',
@@ -63,5 +63,5 @@ export const links = {
       },
     ],
   },
-}
+]
 
