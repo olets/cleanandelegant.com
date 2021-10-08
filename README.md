@@ -17,4 +17,4 @@ $ npm run dev
 $ npm run generate
 ```
 
-When `main` is pushed, a GitHub Action builds and deploys via FTP.
+When `main` is pushed, a GitHub Action builds and deploys to https://cleanandelegant.com/ via FTP.
