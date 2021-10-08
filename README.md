@@ -1,5 +1,9 @@
 # resume-nuxt
 
+[![ci](https://github.com/olets/resume-nuxt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/olets/resume-nuxt/actions/workflows/ci.yml)
+
+My resume site, in Nuxt.
+
 ## Build Setup
 
 ```bash
