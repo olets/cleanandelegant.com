@@ -28,7 +28,7 @@ export const links = {
     heading: 'Experience',
     links: [
       {
-        href: 'https://cleanandelegant.com/Henry_Bley-Vroman_resume.pdf',
+        href: '/Henry_Bley-Vroman_resume.pdf',
         hoverColor: 'maroon-400',
         iconEntity: '&#xe415;',
         text: 'Print-ready Resume',
