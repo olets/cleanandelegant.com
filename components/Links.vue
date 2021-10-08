@@ -4,18 +4,18 @@
       {{ heading }}
     </h3>
 
-    <ul class="mb-2 ml-6">
+    <ul class="ml-6 leading-snug">
       <li v-for="(link, i) in links"
             :key="i"
             class="my-2">
-        <a class="flex transition-colors duration-300 group hover:text-black"
+        <a :class="`mb-4 flex transition-colors duration-300 group hover:text-black`"
               :href="link.href">
           <span :class="`mt-px mr-2 duration-300 font-icon group-hover:text-${link.hoverColor}`"
                 aria-hidden="true">
             <span v-html="link.iconEntity"></span>
           </span>
 
-          {{ link.text }}
+          <span :class="link.class">{{ link.text }}</span>
         </a>
       </li>
     </ul>

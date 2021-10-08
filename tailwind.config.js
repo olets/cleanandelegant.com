@@ -20,6 +20,7 @@ module.exports = {
     'group-hover:text-maroon-400',
     'group-hover:text-pink-500',
     'group-hover:text-yellow-500',
+    'underline',
   ],
   theme: {
     extend: {
