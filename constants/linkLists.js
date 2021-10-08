@@ -2,22 +2,6 @@
 
 export const linkLists = [
   {
-    heading: 'Contact',
-    links: [
-      {
-        className: 'underline',
-        href: 'mailto:olets@olets.dev',
-        hoverColor: 'green-500',
-        iconEntity: '&#xe0E6;',
-        text: 'olets@olets.dev',
-      },
-      {
-        iconEntity: '&#xe0c8;',
-        text: 'Hawaii',
-      },
-    ],
-  },
-  {
     heading: 'Experience',
     links: [
       {
@@ -34,6 +18,22 @@ export const linkLists = [
         hoverColor: 'yellow-500',
         iconEntity: '&#xeA19;',
         text: 'Stackoverflow Developer Story (CV)',
+      },
+    ],
+  },
+  {
+    heading: 'Contact',
+    links: [
+      {
+        className: 'underline',
+        href: 'mailto:olets@olets.dev',
+        hoverColor: 'green-500',
+        iconEntity: '&#xe0E6;',
+        text: 'olets@olets.dev',
+      },
+      {
+        iconEntity: '&#xe0c8;',
+        text: 'Hawaii',
       },
     ],
   },
