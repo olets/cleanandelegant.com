@@ -10,17 +10,25 @@ const s = (value) => {
   return withUnit(value, 's')
 }
 
-const simpleUtilities = ([property, config, e]) => {
-  return Object.entries(config).map(([name, value]) => {
-      const selector = `${property}-${name}`
-      const rule = {}
-      rule[property] = value
+const cssProperty = plugin(({ addUtilities, e, theme, variants }) => {
+  const themeKey = 'cssProperty'
+  const pluginConfig = theme(themeKey, {})
+  const pluginVariants = variants(themeKey, [])
 
-      return {
-        [`.${e(selector)}`]: rule,
-      }
+  const utilities = Object.entries(pluginConfig).flatMap(([property, config]) => {
+    return Object.entries(config).map(([name, value]) => {
+        const selector = `${property}-${name}`
+        const rule = {}
+        rule[property] = value
+
+        return {
+          [`.${e(selector)}`]: rule,
+        }
+    })
   })
-}
+
+  addUtilities(utilities, pluginVariants)
+})
 
 module.exports = {
   content: {
@@ -67,21 +75,12 @@ module.exports = {
         'serif': ['Alegreya Sans SC', 'serif'],
         'icon': ['Material Icons']
       },
-      property: {
+      cssProperty: {
         'animation-duration': {
           ...s(2),
         }
       }
     },
   },
-  plugins: [
-    plugin(({ addUtilities, e, theme, variants }) => {
-      const pluginConfig = theme('property', {})
-      const pluginVariants = variants('property', [])
-
-      const utilities = Object.entries(pluginConfig).flatMap(([property, config]) => simpleUtilities([property, config, e]))
-
-      addUtilities(utilities, pluginVariants)
-    })
-  ]
+  plugins: [cssProperty]
 }
