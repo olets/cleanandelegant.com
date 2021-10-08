@@ -1,6 +1,6 @@
 # resume-nuxt
 
-[![ci](https://github.com/olets/resume-nuxt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/olets/resume-nuxt/actions/workflows/ci.yml)
+[![Badge showing CI workflow status](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml)
 
 My resume site, in Nuxt.
 
