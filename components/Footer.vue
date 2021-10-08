@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <nav aria-labelledby="nav" class="grid grid-cols-3 leading-relaxed mb-14">
+    <nav aria-labelledby="nav" class="grid-cols-3 leading-relaxed sm:grid mb-14">
       <h2 id="nav" class="sr-only">Links</h2>
       <div>
         <Links :heading="links.experience.heading"
