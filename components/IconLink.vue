@@ -3,6 +3,7 @@
         :href="href">
     <span :class="`mt-px mr-2 duration-300 font-icon group-hover:text-${hoverColor}`"
           aria-hidden="true">
+      <!-- eslint-disable-next-line vue/no-v-html -->
       <span v-html="iconEntity"></span>
     </span>
 
