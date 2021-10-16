@@ -6,7 +6,8 @@ export default {
   head: {
     title: 'Henry Bley-Vroman, experienced front-end developer',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
+      class: 'text-[14px] md:text-[16px]',
     },
     meta: [
       { charset: 'utf-8' },
@@ -15,8 +16,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

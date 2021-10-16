@@ -2,7 +2,7 @@
   <div class="max-w-5xl px-6 mx-auto my-20 antialiased leading-loose text-slate-500">
     <Header></Header>
 
-    <main class="text-lg">
+    <main class="">
       <Intro></Intro>
 
       <div v-for="(airtableSection, index) in airtableSections"
