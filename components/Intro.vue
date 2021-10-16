@@ -13,7 +13,7 @@
 
       Co-chair of Viget's <Em>Diversity, Equity, and Inclusion</Em> Advisory Committee.
 
-      Fiddle player. Woodturner. Restorer of early 20th Century clay croquet courts.
+      Fiddle player. Woodturner. Lover of early 20th century clay-court croquet.
     </p>
   </section>
 </template>
