@@ -12,7 +12,7 @@
       {{ summary }}
     </p>
 
-    <div class="relative">
+    <div class="relative px-8 md:px-0">
       <div class="absolute -ml-6 -mt-6 left-1/2 top-1/2 animate-spin animation-duration-2s border-[6px] border-gray-300 border-r-blue-400 h-12 rounded-full w-12"></div>
 
       <iframe :src="src"
