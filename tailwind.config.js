@@ -40,27 +40,6 @@ module.exports = {
       './nuxt.config.{js,ts}',
     ],
   },
-  safelist: [
-    // for components/SectionHeading.vue
-    'bg-red-700',
-    'bg-green-700',
-    // for constants/links.js
-    'group-hover:text-blue-400',
-    'group-hover:text-blue-600',
-    'group-hover:text-green-500',
-    'group-hover:text-indigo-500',
-    'group-hover:text-maroon-400',
-    'group-hover:text-pink-500',
-    'group-hover:text-yellow-500',
-    'group-focus:text-blue-400',
-    'group-focus:text-blue-600',
-    'group-focus:text-green-500',
-    'group-focus:text-indigo-500',
-    'group-focus:text-maroon-400',
-    'group-focus:text-pink-500',
-    'group-focus:text-yellow-500',
-    'underline',
-  ],
   theme: {
     extend: {
       borderWidth: {

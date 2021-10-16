@@ -31,7 +31,6 @@
 </template>
 
 <script>
-  // dividerClassNames must be safelisted in tailwind.config.js
   const airtableSections = [
     {
       heading: 'Select Client Projects',
@@ -53,25 +52,24 @@
     },
   ]
 
-  // hover color classes must be safelisted in tailwind.config.js
   const linkLists = [
     {
       heading: 'Experience',
       links: [
         {
-          className: 'underline',
           href: '/Henry_Bley-Vroman_resume.pdf',
-          hoverColor: 'maroon-400',
+          iconClass: 'group-focus:text-maroon-400 group-hover:text-maroon-400',
           iconEntity: '&#xe415;',
           text: 'Print-ready Resume',
+          textClass: 'underline',
           textClasses: 'font-bold',
         },
         {
-          className: 'underline',
           href: 'https://stackoverflow.com/story/henrybleyvroman',
-          hoverColor: 'yellow-500',
+          iconClass: 'group-focus:text-yellow-500 group-hover:text-yellow-500',
           iconEntity: '&#xeA19;',
           text: 'Stackoverflow Developer Story (CV)',
+          textClass: 'underline',
         },
       ],
     },
@@ -79,11 +77,11 @@
       heading: 'Contact',
       links: [
         {
-          className: 'underline',
           href: 'mailto:olets@olets.dev',
-          hoverColor: 'green-500',
+          iconClass: 'group-focus:text-green-500 group-hover:text-green-500',
           iconEntity: '&#xe0E6;',
           text: 'olets@olets.dev',
+          textClass: 'underline',
         },
         {
           iconEntity: '&#xe0c8;',
@@ -95,25 +93,25 @@
       heading: 'Profiles',
       links: [
         {
-          className: 'underline',
           href: 'https://github.com/olets',
-          hoverColor: 'pink-500',
+          iconClass: 'group-focus:text-pink-500 group-hover:text-pink-500',
           iconEntity: '&#xe86f;',
           text: 'GitHub projects & open-source contributions',
+          textClass: 'underline',
         },
         {
-          className: 'underline',
           href: 'https://stackoverflow.com/users/1241736/henry',
-          hoverColor: 'yellow-500',
+          iconClass: 'group-focus:text-yellow-500 group-hover:text-yellow-500',
           iconEntity: '&#xe0c6;',
           text: 'Stackoverflow activity',
+          textClass: 'underline',
         },
         {
-          className: 'underline',
           href: 'https://www.linkedin.com/in/henry-bley-vroman',
-          hoverColor: 'blue-600',
+          iconClass: 'group-focus:text-blue-600 group-hover:text-blue-600',
           iconEntity: '&#xe97a;',
           text: 'LinkedIn',
+          textClass: 'underline',
         },
       ],
     },

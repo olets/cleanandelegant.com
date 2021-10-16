@@ -1,13 +1,13 @@
 <template>
   <a :class="`mb-4 flex transition-colors duration-300 group hover:text-black`"
         :href="href">
-    <span :class="`mt-px mr-2 duration-300 font-icon group-focus:text-${hoverColor} group-hover:text-${hoverColor}`"
+    <span :class="`mt-px mr-2 duration-300 font-icon ${iconClass}`"
           aria-hidden="true">
       <!-- eslint-disable-next-line vue/no-v-html -->
       <span v-html="iconEntity"></span>
     </span>
 
-    <span :class="className">{{ text }}</span>
+    <span :class="textClass">{{ text }}</span>
   </a>
 </template>
 
@@ -19,7 +19,7 @@ export default {
       required: false,
       default: null,
     },
-    hoverColor: {
+    iconClass: {
       type: String,
       required: false,
       default: null,
@@ -28,7 +28,7 @@ export default {
       type: String,
       required: true,
     },
-    className: {
+    textClass: {
       type: String,
       required: false,
       default: null,
