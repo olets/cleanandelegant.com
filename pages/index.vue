@@ -36,14 +36,20 @@
     {
       heading: 'Select Client Projects',
       airtableEmbedId: 'shrSQfzb1yfob4QOe',
-      summary: 'Sorted by date descending, with ongoing projects first; and then alphabetically.',
+      summary: 'Sorted by date, descending, with ongoing projects first; and then alphabetically.',
       airtableEmbedTitle: 'CV table'
+    },
+    {
+      heading: 'Select Open Source',
+      airtableEmbedId: 'shrrYAHwKSNDrw21j',
+      airtableEmbedTitle: 'Open  source table',
+      summary: 'Sorted by type and then alphabetically.',
     },
     {
       heading: 'Select Writings',
       airtableEmbedId: 'shrDTpZKkXftcjYOk',
       airtableEmbedTitle: 'Writings table',
-      summary: 'Sorted by date descending',
+      summary: 'Sorted by date, descending.',
     },
   ]
 
