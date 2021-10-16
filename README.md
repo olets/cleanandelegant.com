@@ -2,7 +2,7 @@
 
 [![Badge showing CI workflow status](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml)
 
-My resume site, in Nuxt.
+My resume site, in Nuxt with Tailwind CSS 3.
 
 ## Build Setup
 
