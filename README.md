@@ -2,21 +2,19 @@
 
 [![Badge showing CI workflow status](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml/badge.svg)](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml)
 
-My resume site, in Nuxt with Tailwind CSS 3.
+Source for https://cleanandelegant.com/
 
 ## Features
 
-- Vue
-- Nuxt 2
-- Tailwind CSS 3
+- **Nuxt** 2 (**Vue** 2, **Vuex** 3)
+- **Tailwind CSS** 3
 - Enforce conventions on commit:
-    - ESLint
-    - Stylelint
-    - Conventional Commits
-- GitHub Actions
-    - Run tests
-      - Status displayed in README
-    - Deploy via FTP
+    - **ESLint**
+    - **Conventional Commits**
+- **GitHub Actions**
+    - Run tests (**CI**)
+    - Deploy via FTP (**CD**)
+- CI status displayed in README
 
 ## Build Setup
 
@@ -33,4 +31,4 @@ $ npm run generate
 
 ## Deploy
 
-Push to `main` to deploy to https://cleanandelegant.com/
+Push to `main`.
