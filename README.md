@@ -4,6 +4,20 @@
 
 My resume site, in Nuxt with Tailwind CSS 3.
 
+## Features
+
+- Vue
+- Nuxt 2
+- Tailwind CSS 3
+- Enforce conventions on commit:
+    - ESLint
+    - Stylelint
+    - Conventional Commits
+- GitHub Actions
+    - Run tests
+      - Status displayed in README
+    - Deploy via FTP
+
 ## Build Setup
 
 ```bash
@@ -17,4 +31,6 @@ $ npm run dev
 $ npm run generate
 ```
 
-When `main` is pushed, a GitHub Action builds and deploys to https://cleanandelegant.com/ via FTP.
+## Deploy
+
+Push to `main` to deploy to https://cleanandelegant.com/
