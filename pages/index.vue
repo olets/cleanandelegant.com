@@ -35,14 +35,12 @@
   const airtableSections = [
     {
       heading: 'Select Client Projects',
-      dividerClassName: 'bg-green-700',
       airtableEmbedId: 'shrSQfzb1yfob4QOe',
       summary: 'Sorted by date descending, with ongoing projects first; and then alphabetically.',
       airtableEmbedTitle: 'CV table'
     },
     {
       heading: 'Select Writings',
-      dividerClassName: 'bg-green-700',
       airtableEmbedId: 'shrDTpZKkXftcjYOk',
       airtableEmbedTitle: 'Writings table',
       summary: 'Sorted by date descending',

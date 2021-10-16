@@ -4,7 +4,7 @@
       <div class="inline-block text-xl uppercase text-slate-400">
         <h2>{{ heading }}</h2>
 
-        <span :class="`block w-3/4 opacity-50 h-1.5 w-48 mx-auto mt-6 mb-12 ${ dividerClassName }`"></span>
+        <span class="bg-green-700 block w-3/4 opacity-50 h-1.5 w-48 mx-auto mt-6 mb-12"></span>
       </div>
     </div>
 
@@ -33,10 +33,6 @@
   export default {
     props: {
       heading: {
-        type: String,
-        required: true,
-      },
-      dividerClassName: {
         type: String,
         required: true,
       },
