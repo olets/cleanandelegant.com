@@ -34,17 +34,18 @@
   // dividerClassNames must be safelisted in tailwind.config.js
   const airtableSections = [
     {
-      heading: 'Select CV',
+      heading: 'Select Client Projects',
       dividerClassName: 'bg-green-700',
       airtableEmbedId: 'shrSQfzb1yfob4QOe',
-      summary: 'Some recent projects, sorted by date with ongoing projects first and then alphabetically.',
+      summary: 'Sorted by date descending, with ongoing projects first; and then alphabetically.',
       airtableEmbedTitle: 'CV table'
     },
     {
       heading: 'Select Writings',
       dividerClassName: 'bg-green-700',
       airtableEmbedId: 'shrDTpZKkXftcjYOk',
-      airtableEmbedTitle: 'Writings table'
+      airtableEmbedTitle: 'Writings table',
+      summary: 'Sorted by date descending',
     },
   ]
 
