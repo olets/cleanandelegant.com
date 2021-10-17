@@ -3,8 +3,8 @@
     <span class="sr-only">{{ heading }}</span>
 
     <ul class="ml-6 leading-snug">
-      <li v-for="link in links"
-            :key="link"
+      <li v-for="(link, index) in links"
+            :key="index"
             class="my-2">
         <IconLink v-bind="link"></IconLink>
       </li>
