@@ -1,25 +1,25 @@
 <template>
-  <a :class="`mb-4 flex transition-colors duration-300 group hover:text-black`"
+  <a :class="`mb-4 flex ${className}`"
         :href="href">
-    <span :class="`mt-px mr-2 duration-300 font-icon ${iconClass}`"
+    <span class="mt-px mr-2 transition-all font-icon"
           aria-hidden="true">
       <!-- eslint-disable-next-line vue/no-v-html -->
       <span v-html="iconEntity"></span>
     </span>
 
-    <span :class="textClass">{{ text }}</span>
+    <span :class="`transition-all ${textClass}`">{{ text }}</span>
   </a>
 </template>
 
 <script>
 export default {
   props: {
-    href: {
+    className: {
       type: String,
       required: false,
       default: null,
     },
-    iconClass: {
+    href: {
       type: String,
       required: false,
       default: null,
