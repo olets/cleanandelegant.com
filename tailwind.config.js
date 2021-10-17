@@ -1,4 +1,16 @@
 const plugin = require('tailwindcss/plugin')
+// Nuxt can't find 'tailwindcss/lib/util/flattenColorPalette'
+const flattenColorPalette = (colors) =>
+    Object.assign(
+        {},
+        ...Object.entries(colors).flatMap(([color, values]) =>
+            typeof values === 'object'
+                ? Object.entries(flattenColorPalette(values)).map(([number, hex]) => ({
+                    [color + (number === 'DEFAULT' ? '' : `-${number}`)]: hex,
+                }))
+                : [{ [`${color}`]: values }]
+        )
+    )
 
 const withUnit = (value, unit) => {
   const obj = {}
@@ -25,6 +37,22 @@ const cssProperty = plugin(({ addUtilities, e, theme, variants }) => {
           [`.${e(selector)}`]: rule,
         }
     })
+  })
+
+  addUtilities(utilities, pluginVariants)
+})
+
+const textDecorationColor = plugin(({ addUtilities, e, theme, variants }) => {
+  const pluginConfig = theme('textDecorationColor', {})
+  const pluginVariants = variants('textDecorationColor', [])
+  const colors = flattenColorPalette(pluginConfig)
+
+  const utilities = Object.entries(colors).map(([name, value]) => {
+      return {
+          [`.${e(`underline-${name}`)}`]: {
+              textDecorationColor: value,
+          }
+      }
   })
 
   addUtilities(utilities, pluginVariants)
@@ -61,12 +89,17 @@ module.exports = {
         'serif': ['Alegreya Sans SC', 'serif'],
         'icon': ['Material Icons']
       },
+
+      /**
+       * Plugins
+       */
       cssProperty: {
         'animation-duration': {
           ...s(2),
         }
-      }
+      },
+      textDecorationColor: (theme) => theme('colors'),
     },
   },
-  plugins: [cssProperty]
+  plugins: [cssProperty, textDecorationColor]
 }
