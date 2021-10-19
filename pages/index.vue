@@ -5,6 +5,8 @@
     <main class="">
       <Intro></Intro>
 
+      <Sites></Sites>
+
       <div v-for="(airtableSection, index) in airtableSections"
             :key="index"
             class="my-20">
@@ -31,13 +33,11 @@
 </template>
 
 <script>
+  import { airtableFields } from '../utility/airtable'
+  const writings = airtableFields('Writings')
+  const projects = airtableFields('Projects')
+
   const airtableSections = [
-    {
-      heading: 'Select Client Projects',
-      airtableEmbedId: 'shrSQfzb1yfob4QOe',
-      summary: 'Sorted by date, descending, with ongoing projects first; and then alphabetically.',
-      airtableEmbedTitle: 'CV table'
-    },
     {
       heading: 'Select Open Source',
       airtableEmbedId: 'shrrYAHwKSNDrw21j',
@@ -121,6 +121,8 @@
       return {
         airtableSections,
         linkLists,
+        projects,
+        writings,
       }
     },
   }

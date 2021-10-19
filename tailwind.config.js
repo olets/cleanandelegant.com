@@ -67,6 +67,11 @@ module.exports = {
       './plugins/**/*.{js,ts}',
       './nuxt.config.{js,ts}',
     ],
+    safelist: [
+      {
+        pattern: /bg-.+-200/
+      }
+    ]
   },
   theme: {
     extend: {
