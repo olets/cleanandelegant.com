@@ -13,16 +13,20 @@
         <a
           v-if="record.Link"
           :href="record.Link"
-          class="underline transition-all focus:text-blue-400 hover:text-blue-400 underline-blue-400"
+          class="group"
         >
-          {{ record.Project }}
+          <span class="underline transition-all group-focus:text-blue-400 group-hover:text-blue-400 underline-blue-400">
+            {{ record.Name }}
+          </span>
+
+          <p v-if="record.Description">{{ record.Description }}</p>
         </a>
 
-        <span v-else>{{ record.Name }}</span>
-      </TableDataCell>
+        <div v-else>
+          {{ record.Name }}
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Roles)" :possible-tags="roles"></TagList>
+          <p v-if="record.Description">{{ record.Description }}</p>
+        </div>
       </TableDataCell>
 
       <TableDataCell>
@@ -31,10 +35,6 @@
 
       <TableDataCell>
         <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
-      </TableDataCell>
-
-      <TableDataCell>
-        <YearRange v-if="record.When" :years="record.When"></YearRange>
       </TableDataCell>
     </TableRow>
   </AirtableTableSection>
@@ -47,14 +47,12 @@
 
   const columnHeadings = [
     'Project',
-    'Roles',
     'Type',
     'Tech',
-    'When',
   ]
-  const heading = 'Select Client Projects'
-  const table = airtableFields('Sites')
-  const themeColor = 'green'
+  const heading = 'Select Open Source'
+  const table = airtableFields('Projects')
+  const themeColor = 'indigo'
 
   export default {
     data() {
@@ -66,9 +64,6 @@
       }
     },
     computed: {
-      roles() {
-        return uniqueFieldValues(this.table, 'Roles')
-      },
       techs() {
         return uniqueFieldValues(this.table, 'Tech')
       },

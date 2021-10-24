@@ -7,6 +7,8 @@
 
       <Sites></Sites>
 
+      <Projects></Projects>
+
       <div v-for="(airtableSection, index) in airtableSections"
             :key="index"
             class="my-20">
@@ -38,12 +40,6 @@
   const projects = airtableFields('Projects')
 
   const airtableSections = [
-    {
-      heading: 'Select Open Source',
-      airtableEmbedId: 'shrrYAHwKSNDrw21j',
-      airtableEmbedTitle: 'Open  source table',
-      summary: 'Sorted by type and then alphabetically.',
-    },
     {
       heading: 'Select Writings',
       airtableEmbedId: 'shrDTpZKkXftcjYOk',

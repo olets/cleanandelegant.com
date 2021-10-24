@@ -13,7 +13,7 @@
     </p>
 
     <div class="overflow-auto border max-h-96">
-      <table class="text-sm leading-snug">
+      <table class="w-full text-sm leading-snug">
         <thead class="sticky top-0 bg-white shadow">
           <tr :class="`bg-${themeColor}-50`">
             <th

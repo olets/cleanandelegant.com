@@ -1,6 +1,6 @@
 <template>
   <div v-if="tags.length">
-    <ul v-if="Array.isArray(tags)" class="flex flex-wrap">
+    <ul v-if="tags.length > 1" class="flex flex-wrap">
       <li
         v-for="(tag, i) in tags"
         :key="i"
@@ -10,7 +10,7 @@
       </li>
     </ul>
 
-    <span v-else :class="getTagClass(tags)">{{ tags.trim() }}</span>
+    <span v-else :class="getTagClass(tags[0])">{{ tags[0].trim() }}</span>
   </div>
 </template>
 
