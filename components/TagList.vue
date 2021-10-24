@@ -1,13 +1,17 @@
 <template>
-  <ul v-if="tags.length" class="flex flex-wrap">
-    <li
-      v-for="(tag, i) in tags"
-      :key="i"
-      :class="getTagClass(tag)"
-    >
-      {{ tag.trim() }}
-    </li>
-  </ul>
+  <div v-if="tags.length">
+    <ul v-if="Array.isArray(tags)" class="flex flex-wrap">
+      <li
+        v-for="(tag, i) in tags"
+        :key="i"
+        :class="getTagClass(tag)"
+      >
+        {{ tag.trim() }}
+      </li>
+    </ul>
+
+    <span v-else :class="getTagClass(tags)">{{ tags.trim() }}</span>
+  </div>
 </template>
 
 <script setup>
