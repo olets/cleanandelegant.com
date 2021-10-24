@@ -4,14 +4,14 @@
       <div class="inline-block text-xl uppercase text-slate-400">
         <h2>Sites</h2>
 
-        <span class="bg-green-700 block w-3/4 opacity-50 h-1.5 w-48 mx-auto mt-6 mb-12"></span>
+        <span :class="`bg-${themeColor}-700 block w-3/4 opacity-50 h-1.5 w-48 mx-auto mt-6 mb-12`"></span>
       </div>
     </div>
 
     <div class="overflow-auto border max-h-96">
       <table class="leading-snug">
         <thead class="sticky top-0 bg-white shadow">
-          <tr>
+          <tr :class="`bg-${themeColor}-50`">
             <th
               v-for="column in columns"
               :key="column"
@@ -101,12 +101,15 @@
     'When',
   ]
 
+  const themeColor = 'green'
+
   export default {
     data() {
       return {
         colors,
         columns,
         table,
+        themeColor,
       }
     },
     computed: {
