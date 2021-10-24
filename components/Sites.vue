@@ -41,8 +41,8 @@
               <ul v-if="Array.isArray(record.Roles)" class="flex flex-wrap">
                 <li
                   v-for="(role, r) in record.Roles"
-                  :key="role + '_' + r"
-                  :class="`bg-${colors[(Math.floor(colors.length / roles.length)) * roles.indexOf(role.trim())]}-200 m-0.5 px-1.5 rounded whitespace-nowrap`"
+                  :key="r"
+                  :class="getTagClass(roles, role)"
                 >
                   {{ role }}
                 </li>
@@ -53,8 +53,8 @@
               <ul v-if="record.Type.split(',').length" class="flex flex-wrap">
                 <li
                   v-for="(type, r) in record.Type.split(',')"
-                  :key="type + '_' + r"
-                  :class="`bg-${colors[(Math.floor(colors.length / types.length)) * types.indexOf(type.trim())]}-200 m-0.5 px-1.5 rounded whitespace-nowrap`"
+                  :key="r"
+                  :class="getTagClass(types, type)"
                 >
                   {{ type.trim() }}
                 </li>
@@ -65,8 +65,8 @@
               <ul v-if="record.Tech.split(',').length" class="flex flex-wrap">
                 <li
                   v-for="(tech, r) in record.Tech.split(',')"
-                  :key="tech + '_' + r"
-                  :class="`bg-${colors[(Math.floor(colors.length / techs.length)) * techs.indexOf(tech.trim())]}-200 m-0.5 px-1.5 rounded whitespace-nowrap`"
+                  :key="r"
+                  :class="getTagClass(techs, tech)"
                 >
                   {{ tech.trim() }}
                 </li>
@@ -85,13 +85,7 @@
 
 <script setup>
   import { airtableFields } from '../utility/airtable'
-
-  const table = airtableFields('Sites')
-    .sort((a,b) => a.Project.localeCompare(b.Project))
-  const allColors = require('tailwindcss/colors')
-  const colors = Object.entries(allColors)
-    .map(([name, value]) => value['400'] ? name : null)
-    .filter(i => i)
+  import { tagColorKey, tagColors } from '../utility/tag-colors'
 
   const columns = [
     'Project',
@@ -101,15 +95,26 @@
     'When',
   ]
 
+  const table = airtableFields('Sites')
+
   const themeColor = 'green'
 
   export default {
     data() {
       return {
-        colors,
+        tagColorKey,
         columns,
         table,
+        tagColors,
         themeColor,
+      }
+    },
+    methods: {
+      getTagClass(values, value) {
+        return `bg-${this.getTagColor(values, value)}-${tagColorKey} m-0.5 px-1.5 rounded whitespace-nowrap`
+      },
+      getTagColor(values, value) {
+        return this.tagColors[(Math.floor(tagColors.length / values.length)) * values.indexOf(value.trim())]
       }
     },
     computed: {
