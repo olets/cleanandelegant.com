@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
 
       - name: Cache node_modules 📦
         uses: actions/cache@v2.1.6
@@ -38,8 +41,5 @@ jobs:
         run: npm run lint
 
       - name: Generate 🛠️
-        env:
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
         run: npm run generate
 
