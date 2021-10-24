@@ -48,7 +48,7 @@
     'Tech',
     'When',
   ]
-  const heading = 'Sites'
+  const heading = 'Select Client Projects'
   const table = airtableFields('Sites')
   const themeColor = 'green'
 
