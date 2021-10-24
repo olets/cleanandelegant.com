@@ -48,7 +48,7 @@
   ]
   const heading = 'Select Writings'
   const table = airtableFields('Writings')
-  const themeColor = 'pink'
+  const themeColor = 'sky'
 
   export default {
     data() {
