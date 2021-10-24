@@ -12,14 +12,14 @@
       {{ summary }}
     </p>
 
-    <div class="overflow-auto border max-h-80">
+    <div class="overflow-auto border">
       <table class="w-full text-sm leading-snug">
         <thead class="sticky top-0 bg-white shadow">
           <tr :class="`bg-${themeColor}-50`">
             <th
               v-for="columnHeading in columnHeadings"
               :key="columnHeading"
-              class="py-2 pl-2 align-top"
+              class="px-4 py-2 text-left align-top"
             >
               {{ columnHeading }}
             </th>
