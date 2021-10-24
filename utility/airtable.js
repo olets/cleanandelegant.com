@@ -1,11 +1,8 @@
 const Airtable = require('airtable')
 
-const dotenv = require('dotenv')
-dotenv.config()
-
 export const airtableFields = (table, config = {}) => {
   const fields = []
-  const base = new Airtable({apiKey: process.env.airtableApiKey}).base(process.env.airtableBase);
+  const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE);
   base(table).select(config)
     .eachPage(function page(records, fetchNextPage) {
       records.forEach((r) => fields.push(r.fields))

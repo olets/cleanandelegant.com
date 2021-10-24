@@ -4,8 +4,8 @@ export default {
 
   // https://nuxtjs.org/docs/configuration-glossary/configuration-env/
   env: {
-    airtableApiKey: process.env.AIRTABLE_API_KEY,
-    airtableBase: process.env.AIRTABLE_BASE,
+    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
+    AIRTABLE_BASE: process.env.AIRTABLE_BASE,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
