@@ -10,7 +10,7 @@
       <div v-for="(airtableSection, index) in airtableSections"
             :key="index"
             class="my-20">
-        <AirtableSection v-bind="airtableSection"></AirtableSection>
+        <AirtableIframeSection v-bind="airtableSection"></AirtableIframeSection>
       </div>
 
       <section>
