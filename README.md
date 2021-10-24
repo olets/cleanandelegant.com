@@ -8,6 +8,8 @@ Source for https://cleanandelegant.com/
 
 - **Nuxt** 2 (**Vue** 2, **Vuex** 3)
 - **Tailwind CSS** 3
+- **Data fetched by REST API** from Airtable
+- Airtable data presented in **accessible** tables (Airtable's iframes are not accessible)
 - Enforce conventions on commit:
     - **ESLint**
     - **Conventional Commits**

@@ -67,9 +67,17 @@ module.exports = {
       './plugins/**/*.{js,ts}',
       './nuxt.config.{js,ts}',
     ],
+    safelist: [
+      {
+        pattern: /bg-.+-(50|200|700)/
+      }
+    ]
   },
   theme: {
     extend: {
+      borderColor: (theme) => ({
+        DEFAULT: theme('colors.gray.500'),
+      }),
       borderWidth: {
         1: "1px",
       },

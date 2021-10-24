@@ -2,6 +2,12 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // https://nuxtjs.org/docs/configuration-glossary/configuration-env/
+  env: {
+    airtableApiKey: process.env.AIRTABLE_API_KEY,
+    airtableBase: process.env.AIRTABLE_BASE,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Henry Bley-Vroman, experienced front-end developer',
