@@ -2,6 +2,7 @@
   <TableSection
     :column-headings="columnHeadings"
     :heading="heading"
+    :summary="summary"
     :theme-color="themeColor"
   >
     <TableRow
@@ -51,7 +52,19 @@
     'Tech',
   ]
   const heading = 'Select Open Source'
-  const table = airtableFields('Projects')
+  const summary = 'Sorted by type and then alphabetically.'
+  const table = airtableFields('Projects', {
+    sort: [
+      {
+        field: 'Type',
+        direction: 'asc',
+      },
+      {
+        field: 'Name',
+        direction: 'asc',
+      },
+    ]
+  })
   const themeColor = 'indigo'
 
   export default {
@@ -59,6 +72,7 @@
       return {
         columnHeadings,
         heading,
+        summary,
         table,
         themeColor,
       }

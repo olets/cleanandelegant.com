@@ -2,6 +2,7 @@
   <TableSection
     :column-headings="columnHeadings"
     :heading="heading"
+    :summary="summary"
     :theme-color="themeColor"
   >
     <TableRow
@@ -61,7 +62,23 @@
     'Year(s)',
   ]
   const heading = 'Select Client Projects'
-  const table = airtableFields('Sites')
+  const summary = 'Sorted by year, descending, with ongoing projects first; and then alphabetically.'
+  const table = airtableFields('Sites', {
+    sort: [
+      {
+        field: 'Current',
+        direction: 'desc',
+      },
+      {
+        field: 'When',
+        direction: 'desc',
+      },
+      {
+        field: 'Name',
+        direction: 'asc',
+      },
+    ]
+  })
   const themeColor = 'green'
 
   export default {
@@ -69,6 +86,7 @@
       return {
         columnHeadings,
         heading,
+        summary,
         table,
         themeColor,
       }
