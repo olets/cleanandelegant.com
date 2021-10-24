@@ -8,14 +8,14 @@
       </div>
     </div>
 
-    <div class="border px-2 max-h-96 overflow-auto">
+    <div class="overflow-auto border max-h-96">
       <table class="leading-snug">
-        <thead>
+        <thead class="sticky top-0 bg-white shadow">
           <tr>
             <th
               v-for="column in columns"
               :key="column"
-              class="align-top pl-2 py-2"
+              class="py-2 pl-2 align-top"
             >
               {{ column }}
             </th>
@@ -25,7 +25,7 @@
           <tr
             v-for="(record, i) in table"
             :key="i"
-            class="border-t py-2"
+            :class="i !== 0 ? 'border-t' : null"
           >
             <td class="align-top pl-2 py-2">
               <a
