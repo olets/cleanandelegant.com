@@ -1,5 +1,8 @@
 const Airtable = require('airtable')
 
+const dotenv = require('dotenv')
+dotenv.config()
+
 export const airtableFields = (table, config = {}) => {
   const fields = []
   const base = new Airtable({apiKey: process.env.airtableApiKey}).base(process.env.airtableBase);

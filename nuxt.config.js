@@ -71,5 +71,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, _ctx) {
+      config.node = {
+          fs: "empty"
+      };
+    }
   }
 }
