@@ -9,11 +9,7 @@
 
       <Projects></Projects>
 
-      <div v-for="(airtableSection, index) in airtableSections"
-            :key="index"
-            class="my-20">
-        <AirtableIframeSection v-bind="airtableSection"></AirtableIframeSection>
-      </div>
+      <Writings></Writings>
 
       <section>
         <h2 class="sr-only">Links</h2>
@@ -35,19 +31,6 @@
 </template>
 
 <script>
-  import { airtableFields } from '@/utility/airtable'
-  const writings = airtableFields('Writings')
-  const projects = airtableFields('Projects')
-
-  const airtableSections = [
-    {
-      heading: 'Select Writings',
-      airtableEmbedId: 'shrDTpZKkXftcjYOk',
-      airtableEmbedTitle: 'Writings table',
-      summary: 'Sorted by date, descending.',
-    },
-  ]
-
   const linkLists = [
     {
       heading: 'Experience',
@@ -115,10 +98,7 @@
   export default {
     data() {
       return {
-        airtableSections,
         linkLists,
-        projects,
-        writings,
       }
     },
   }

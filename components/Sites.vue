@@ -1,5 +1,5 @@
 <template>
-  <AirtableTableSection
+  <TableSection
     :column-headings="columnHeadings"
     :heading="heading"
     :theme-color="themeColor"
@@ -37,7 +37,7 @@
         <YearRange v-if="record.When" :years="record.When"></YearRange>
       </TableDataCell>
     </TableRow>
-  </AirtableTableSection>
+  </TableSection>
 </template>
 
 <script setup>
