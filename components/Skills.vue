@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-  import { airtableFields } from '../utility/airtable'
+  import { airtableFields } from '@/utility/airtable'
   const skills = airtableFields('Skills')
 
   export default {

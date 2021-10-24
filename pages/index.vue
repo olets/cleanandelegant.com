@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  import { airtableFields } from '../utility/airtable'
+  import { airtableFields } from '@/utility/airtable'
   const writings = airtableFields('Writings')
   const projects = airtableFields('Projects')
 

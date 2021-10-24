@@ -84,8 +84,8 @@
 </template>
 
 <script setup>
-  import { airtableFields } from '../utility/airtable'
-  import { tagColorKey, tagColors } from '../utility/tag-colors'
+  import { airtableFields } from '@/utility/airtable'
+  import { tagColorKey, tagColors } from '@/utility/tag-colors'
 
   const columns = [
     'Project',
