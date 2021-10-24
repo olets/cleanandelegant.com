@@ -13,12 +13,20 @@
         <a
           v-if="record.Link"
           :href="record.Link"
-          class="underline transition-all focus:text-blue-400 hover:text-blue-400 underline-blue-400"
+          class="group"
         >
-          {{ record.Project }}
+          <span class="block underline transition-all whitespace-nowrap group-focus:text-blue-400 group-hover:text-blue-400 underline-blue-400">
+            {{ record.Name }}
+          </span>
+
+          <span v-if="record.Description" class="whitespace-nowrap">({{ record.Description }})</span>
         </a>
 
-        <span v-else>{{ record.Name }}</span>
+        <div v-else>
+          {{ record.Name }}
+
+          <div v-if="record.Description" class="whitespace-nowrap">({{ record.Description }})</div>
+        </div>
       </TableDataCell>
 
       <TableDataCell>
