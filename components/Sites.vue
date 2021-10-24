@@ -4,12 +4,12 @@
     :heading="heading"
     :theme-color="themeColor"
   >
-    <tr
+    <TableRow
       v-for="(record, i) in table"
       :key="i"
-      :class="i !== 0 ? 'border-t' : null"
+      :index="i"
     >
-      <td class="px-4 py-2.5 align-top">
+      <TableDataCell>
         <a
           v-if="record.Link"
           :href="record.Link"
@@ -17,24 +17,24 @@
         >
           {{ record.Project }}
         </a>
-      </td>
+      </TableDataCell>
 
-      <td class="px-4 py-2.5 align-top">
+      <TableDataCell>
         <TagList :tags="record.Roles" :possible-tags="roles"></TagList>
-      </td>
+      </TableDataCell>
 
-      <td class="px-4 py-2.5 align-top">
+      <TableDataCell>
         <TagList :tags="record.Type.split(',')" :possible-tags="types"></TagList>
-      </td>
+      </TableDataCell>
 
-      <td class="px-4 py-2.5 align-top">
+      <TableDataCell>
         <TagList :tags="record.Tech.split(',')" :possible-tags="techs"></TagList>
-      </td>
+      </TableDataCell>
 
-      <td class="px-4 py-2.5 align-top">
+      <TableDataCell>
         <YearRange v-if="record.When" :years="record.When"></YearRange>
-      </td>
-    </tr>
+      </TableDataCell>
+    </TableRow>
   </AirtableTableSection>
 </template>
 
@@ -48,11 +48,8 @@
     'Tech',
     'When',
   ]
-
-  const heading = "Sites"
-
+  const heading = 'Sites'
   const table = airtableFields('Sites')
-
   const themeColor = 'green'
 
   export default {
