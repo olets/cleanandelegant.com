@@ -17,6 +17,8 @@
         >
           {{ record.Project }}
         </a>
+
+        <span v-else>{{ record.Name }}</span>
       </TableDataCell>
 
       <TableDataCell>
