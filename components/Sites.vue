@@ -50,7 +50,7 @@
     'Roles',
     'Type',
     'Tech',
-    'When',
+    'Year(s)',
   ]
   const heading = 'Select Client Projects'
   const table = airtableFields('Sites')
