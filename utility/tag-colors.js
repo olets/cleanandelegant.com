@@ -6,5 +6,5 @@ export const tagColors = Object.entries(tailwindcssColors)
   .map(([name, value]) => value[tagColorKey] ? name : null)
   .filter(i => i)
   // take off the grays
-  .slice(5)
+  .slice(3)
 
