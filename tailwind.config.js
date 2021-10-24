@@ -97,6 +97,9 @@ module.exports = {
         'serif': ['Alegreya Sans SC', 'serif'],
         'icon': ['Material Icons']
       },
+      minHeight: {
+        60: `${60/4}rem`,
+      },
 
       /**
        * Plugins

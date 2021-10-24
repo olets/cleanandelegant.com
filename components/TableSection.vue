@@ -12,9 +12,11 @@
       {{ summary }}
     </p>
 
-    <div class="overflow-auto border">
-      <table class="w-full text-sm leading-snug">
-        <thead class="sticky top-0 bg-white shadow">
+    <div class="relative border min-h-60">
+      <div class="absolute -ml-6 -mt-6 left-1/2 top-1/2 mt-0.5 animate-spin animation-duration-2s border-[6px] border-gray-300 border-r-blue-400 h-12 rounded-full w-12"></div>
+
+      <table class="relative w-full text-sm leading-snug bg-white">
+        <thead class="sticky bg-white shadow">
           <tr :class="`bg-${themeColor}-50`">
             <th
               v-for="columnHeading in columnHeadings"
