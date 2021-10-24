@@ -27,7 +27,7 @@
             :key="i"
             :class="i !== 0 ? 'border-t' : null"
           >
-            <td class="align-top pl-2 py-2">
+            <td class="p-4 align-top">
               <a
                 v-if="record.Link"
                 :href="record.Link"
@@ -37,7 +37,7 @@
               </a>
             </td>
 
-            <td class="align-top pl-2 py-2">
+            <td class="p-4 align-top">
               <ul v-if="Array.isArray(record.Roles)" class="flex flex-wrap">
                 <li
                   v-for="(role, r) in record.Roles"
@@ -49,7 +49,7 @@
               </ul>
             </td>
 
-            <td class="align-top pl-2 py-2">
+            <td class="p-4 align-top">
               <ul v-if="record.Type.split(',').length" class="flex flex-wrap">
                 <li
                   v-for="(type, r) in record.Type.split(',')"
@@ -61,7 +61,7 @@
               </ul>
             </td>
 
-            <td class="align-top pl-2 py-2">
+            <td class="p-4 align-top">
               <ul v-if="record.Tech.split(',').length" class="flex flex-wrap">
                 <li
                   v-for="(tech, r) in record.Tech.split(',')"
@@ -73,7 +73,7 @@
               </ul>
             </td>
 
-            <td class="align-top pl-2 py-2">
+            <td class="p-4 align-top">
               <YearRange v-if="record.When" :years="record.When"></YearRange>
             </td>
           </tr>
