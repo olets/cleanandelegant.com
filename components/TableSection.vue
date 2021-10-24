@@ -49,7 +49,7 @@
       summary: {
         type: String,
         required: false,
-        default: null,
+        default: '',
       },
       themeColor: {
         type: String,

@@ -26,12 +26,12 @@ export default {
     className: {
       type: String,
       required: false,
-      default: null,
+      default: '',
     },
     href: {
       type: String,
       required: false,
-      default: null,
+      default: '',
     },
     iconEntity: {
       type: String,
@@ -40,7 +40,7 @@ export default {
     textClass: {
       type: String,
       required: false,
-      default: null,
+      default: '',
     },
     text: {
       type: String,
