@@ -38,8 +38,8 @@ jobs:
         run: npm run lint
 
       - name: Generate 🛠️
+        run: npm run generate
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
-        run: npm run generate
 
