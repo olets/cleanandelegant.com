@@ -8,6 +8,10 @@
       </div>
     </div>
 
+    <p v-if="summary" class="max-w-screen-lg mx-auto mb-10 text-center">
+      {{ summary }}
+    </p>
+
     <div class="overflow-auto border max-h-96">
       <table class="text-sm leading-snug">
         <thead class="sticky top-0 bg-white shadow">
@@ -39,6 +43,11 @@
       heading: {
         type: String,
         required: true,
+      },
+      summary: {
+        type: String,
+        required: false,
+        default: null,
       },
       themeColor: {
         type: String,
