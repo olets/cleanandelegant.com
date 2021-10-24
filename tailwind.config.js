@@ -75,6 +75,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      borderColor: (theme) => ({
+        DEFAULT: theme('colors.gray.500'),
+      }),
       borderWidth: {
         1: "1px",
       },
