@@ -38,39 +38,15 @@
             </td>
 
             <td class="px-4 py-2.5 align-top">
-              <ul v-if="Array.isArray(record.Roles)" class="flex flex-wrap">
-                <li
-                  v-for="(role, r) in record.Roles"
-                  :key="r"
-                  :class="getTagClass(roles, role)"
-                >
-                  {{ role }}
-                </li>
-              </ul>
+              <TagList :tags="record.Roles" :possible-tags="roles"></TagList>
             </td>
 
             <td class="px-4 py-2.5 align-top">
-              <ul v-if="record.Type.split(',').length" class="flex flex-wrap">
-                <li
-                  v-for="(type, r) in record.Type.split(',')"
-                  :key="r"
-                  :class="getTagClass(types, type)"
-                >
-                  {{ type.trim() }}
-                </li>
-              </ul>
+              <TagList :tags="record.Type.split(',')" :possible-tags="types"></TagList>
             </td>
 
             <td class="px-4 py-2.5 align-top">
-              <ul v-if="record.Tech.split(',').length" class="flex flex-wrap">
-                <li
-                  v-for="(tech, r) in record.Tech.split(',')"
-                  :key="r"
-                  :class="getTagClass(techs, tech)"
-                >
-                  {{ tech.trim() }}
-                </li>
-              </ul>
+              <TagList :tags="record.Tech.split(',')" :possible-tags="techs"></TagList>
             </td>
 
             <td class="px-4 py-2.5 align-top">
@@ -85,7 +61,6 @@
 
 <script setup>
   import { airtableFields } from '@/utility/airtable'
-  import { tagColorKey, tagColors } from '@/utility/tag-colors'
 
   const columns = [
     'Project',
@@ -102,29 +77,11 @@
   export default {
     data() {
       return {
-        tagColorKey,
         columns,
         table,
-        tagColors,
-        themeColor,
-      }
-    },
-    methods: {
-      getTagClass(values, value) {
-        return `bg-${this.getTagColor(values, value)}-${tagColorKey} m-0.5 px-1.5 rounded whitespace-nowrap`
-      },
-      getTagColor(values, value) {
-        return this.tagColors[(Math.floor(tagColors.length / values.length)) * values.indexOf(value.trim())]
       }
     },
     computed: {
-      fields() {
-        return [...new Set(
-          this.table
-            .map(site => Object.keys(site))
-            .flat()
-        )]
-      },
       roles() {
         return [...new Set(
           this.table
