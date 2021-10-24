@@ -48,7 +48,7 @@
 
   const columnHeadings = [
     'Project',
-    'Type',
+    'Type(s)',
     'Tech',
   ]
   const heading = 'Select Open Source'

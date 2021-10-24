@@ -56,8 +56,8 @@
 
   const columnHeadings = [
     'Project',
-    'Roles',
-    'Type',
+    'Role(s)',
+    'Type(s)',
     'Tech',
     'Year(s)',
   ]

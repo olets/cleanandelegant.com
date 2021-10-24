@@ -44,7 +44,7 @@
 
   const columnHeadings = [
     'Title',
-    'Topics',
+    'Topic(s)',
     'Year',
   ]
   const heading = 'Select Writings'
