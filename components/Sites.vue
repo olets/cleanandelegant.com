@@ -26,11 +26,11 @@
       </TableDataCell>
 
       <TableDataCell>
-        <TagList :tags="record.Type.split(',')" :possible-tags="types"></TagList>
+        <TagList :tags="record.Type" :possible-tags="types"></TagList>
       </TableDataCell>
 
       <TableDataCell>
-        <TagList :tags="record.Tech.split(',')" :possible-tags="techs"></TagList>
+        <TagList :tags="record.Tech" :possible-tags="techs"></TagList>
       </TableDataCell>
 
       <TableDataCell>
@@ -42,6 +42,7 @@
 
 <script setup>
   import { airtableFields } from '@/utility/airtable'
+  import { uniqueFieldValues } from '@/utility/unique-field-values'
 
   const columnHeadings = [
     'Project',
@@ -65,27 +66,13 @@
     },
     computed: {
       roles() {
-        return [...new Set(
-          this.table
-            .map(site => site.Roles)
-            .flat()
-        )]
+        return uniqueFieldValues(this.table, 'Roles')
       },
       techs() {
-        return [...new Set(
-          this.table
-            .map(site => site.Tech.split(','))
-            .flat()
-            .map(el => el.trim())
-        )]
+        return uniqueFieldValues(this.table, 'Tech')
       },
       types() {
-        return [...new Set(
-          this.table
-            .map(site => site.Type.split(','))
-            .flat()
-            .map(el => el.trim())
-        )]
+        return uniqueFieldValues(this.table, 'Type')
       },
     }
   }
