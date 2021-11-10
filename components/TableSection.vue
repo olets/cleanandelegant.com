@@ -15,22 +15,28 @@
     <div class="relative border min-h-60">
       <div class="absolute -ml-6 -mt-6 left-1/2 top-1/2 mt-0.5 animate-spin animation-duration-2s border-[6px] border-gray-300 border-r-blue-400 h-12 rounded-full w-12"></div>
 
-      <table class="relative w-full text-sm leading-snug bg-white">
-        <thead class="sticky bg-white shadow">
-          <tr :class="`bg-${themeColor}-50`">
-            <th
-              v-for="columnHeading in columnHeadings"
-              :key="columnHeading"
-              class="px-4 py-2 text-left align-top"
-            >
-              {{ columnHeading }}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <slot></slot>
-        </tbody>
-      </table>
+      <div class="relative w-full">
+        <div class="overflow-x-auto">
+          <table class="relative w-full text-sm leading-snug bg-white">
+            <thead class="sticky bg-white shadow">
+              <tr :class="`bg-${themeColor}-50`">
+                <th
+                  v-for="columnHeading in columnHeadings"
+                  :key="columnHeading"
+                  class="px-4 py-2 text-left align-top"
+                >
+                  {{ columnHeading }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <slot></slot>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="absolute top-0 right-0 w-40 h-full bg-gradient-to-r from-white/0 to-white"></div>
+      </div>
     </div>
   </section>
 </template>
