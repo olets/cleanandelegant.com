@@ -16,7 +16,7 @@
           :href="getUrl(record)"
           class="group"
         >
-          <span class="underline transition-all group-focus:text-blue-400 group-hover:text-blue-400 underline-blue-400">
+          <span class="underline transition-all group-focus:text-blue-400 group-hover:text-blue-400 decoration-blue-400">
             {{ record.Title }}
           </span>
         </a>

@@ -16,7 +16,7 @@
           :href="record.Link"
           class="group"
         >
-          <span class="block underline transition-all whitespace-nowrap group-focus:text-blue-400 group-hover:text-blue-400 underline-blue-400">
+          <span class="block underline transition-all whitespace-nowrap group-focus:text-blue-400 group-hover:text-blue-400 decoration-blue-400">
             {{ record.Name }}
           </span>
 
