@@ -6,17 +6,19 @@ Source for https://cleanandelegant.com/
 
 ## Features
 
-- **Nuxt** 2 (**Vue** 2, **Vuex** 3)
+- **Nuxt** 2 (**Vue** 2, **Vuex** 3)*
 - **Tailwind CSS** 3
 - **Data fetched by REST API** from Airtable
 - Airtable data presented in **accessible** tables (Airtable's iframes are not accessible)
-- Enforce conventions on commit:
+- Conventions enforced on commit:
     - **ESLint**
     - **Conventional Commits**
 - **GitHub Actions**
     - Run tests (**CI**)
     - Deploy via FTP (**CD**)
-- CI status displayed in README
+- CI **status badge** on README
+
+\* More than is necessary for this one-pager. But fun!
 
 ## Build Setup
 
