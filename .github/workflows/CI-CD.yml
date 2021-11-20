@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  ci-cd:
+  setup:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -37,12 +37,34 @@ jobs:
       - name: Run linter 👀
         run: npm run lint
 
+  build:
+    needs: setup
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
       - name: Generate 🛠️
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
         run: npm run generate
 
+  deploy:
+    needs: build
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
       - name: Upload FTP ☁️
         uses: sebastianpopp/ftp-action@releases/v2
         with:
