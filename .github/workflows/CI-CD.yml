@@ -14,8 +14,12 @@ jobs:
         node: [14]
 
     steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
       - name: Use CI workflow 🧰
         uses: ./.github/workflows/CI.yml@v1
+
       - name: Upload dist artifact ⏫
         uses: actions/upload-artifact@v2
         with:
