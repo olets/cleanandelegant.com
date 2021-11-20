@@ -6,6 +6,13 @@ on:
 
 jobs:
   use-build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
     steps:
       - name: Use CI workflow 🧰
         uses: ./.github/workflows/CI.yml@v1
