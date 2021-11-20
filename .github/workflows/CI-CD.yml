@@ -1,56 +1,22 @@
-name: ci-cd
+name: build-deploy
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
+  use-build:
+    uses: olets/cleanandelegant.com/.github/workflows/CI.yml
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
-
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v2.4.1
-        with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
-
-      - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit
-
-      - name: Run linter 👀
-        run: npm run lint
-
-      - name: Generate 🛠️
-        env:
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
-        run: npm run generate
-
-      - name: Upload dist for deploy job ⏫
+      - name: Upload dist artifact ⏫
         uses: actions/upload-artifact@v2
         with:
           name: dist
           path: dist
+          retention-days: 1
 
   deploy:
-    needs: build
+    needs: use-build
 
     runs-on: ${{ matrix.os }}
 
@@ -60,18 +26,18 @@ jobs:
         node: [14]
 
     steps:
-      - name: Download dist from build job ⏬
+      - name: Download dist artifact ⏬
         uses: actions/download-artifact@v2
         with:
           name: dist
           path: dist
 
-      - name: Upload FTP ☁️
+      - name: Upload FTP 🚀
         uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "dist"
-          remoteDir: "html"
+          localDir: dist
+          remoteDir: html
 

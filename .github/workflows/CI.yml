@@ -1,8 +1,7 @@
 name: ci
 
 on:
-  pull_request:
-    branches: [ main ]
+  workflow_call:
 
 jobs:
   ci:
@@ -36,3 +35,9 @@ jobs:
 
       - name: Run linter 👀
         run: npm run lint
+
+      - name: Generate 🛠️
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
+        run: npm run generate
