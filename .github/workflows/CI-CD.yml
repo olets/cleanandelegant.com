@@ -6,8 +6,9 @@ on:
 
 jobs:
   use-build:
-    uses: olets/cleanandelegant.com/.github/workflows/CI.yml
     steps:
+      - name: Use CI workflow 🧰
+        uses: ./.github/workflows/CI.yml@v1
       - name: Upload dist artifact ⏫
         uses: actions/upload-artifact@v2
         with:
