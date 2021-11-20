@@ -1,6 +1,6 @@
 # resume-nuxt
 
-[![Badge showing CI workflow status](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml/badge.svg)](https://github.com/olets/resume-nuxt/actions/workflows/CI.yml)
+[![Badge showing CI CD status for main branch](https://github.com/olets/resume-nuxt/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/olets/resume-nuxt/actions/workflows/build-deploy.yml)
 
 Source for https://cleanandelegant.com/
 
