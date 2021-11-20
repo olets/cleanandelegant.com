@@ -6,26 +6,7 @@ on:
 
 jobs:
   use-build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
-
-      - name: Use CI workflow 🧰
-        uses: olets/cleanandelegant.com/.github/workflows/CI.yml@main
-
-      - name: Upload dist artifact ⏫
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
-          retention-days: 1
+    uses: olets/cleanandelegant.com/.github/workflows/CI.yml@main
 
   deploy:
     needs: use-build
