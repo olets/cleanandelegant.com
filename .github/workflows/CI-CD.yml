@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Use CI workflow 🧰
-        uses: ./.github/workflows/CI.yml@v1
+        uses: ./.github/workflows/CI.yml@main
 
       - name: Upload dist artifact ⏫
         uses: actions/upload-artifact@v2
