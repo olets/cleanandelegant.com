@@ -6,7 +6,7 @@ on:
 
 jobs:
   use-build:
-    uses: olets/cleanandelegant.com/.github/workflows/CI.yml@main
+    uses: olets/cleanandelegant.com/.github/workflows/build.yml@main
 
   deploy:
     needs: use-build
