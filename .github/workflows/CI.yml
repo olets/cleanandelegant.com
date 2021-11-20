@@ -41,3 +41,10 @@ jobs:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
         run: npm run generate
+
+      - name: Upload dist artifact ☁️
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
+          retention-days: 1

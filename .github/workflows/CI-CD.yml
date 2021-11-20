@@ -8,21 +8,6 @@ jobs:
   use-build:
     uses: olets/cleanandelegant.com/.github/workflows/CI.yml@main
 
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
-    steps:
-      - name: Upload dist artifact ⏫
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
-          retention-days: 1
-
   deploy:
     needs: use-build
 
