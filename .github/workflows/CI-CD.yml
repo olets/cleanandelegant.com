@@ -43,6 +43,12 @@ jobs:
           AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
         run: npm run generate
 
+      - name: Upload dist for deploy job ⏫
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
+
   deploy:
     needs: build
 
@@ -54,22 +60,10 @@ jobs:
         node: [14]
 
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
-
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v2.4.1
+      - name: Download dist from build job ⏬
+        uses: actions/download-artifact@v2
         with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
-
-      - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          name: dist
 
       - name: Upload FTP ☁️
         uses: sebastianpopp/ftp-action@releases/v2
