@@ -19,10 +19,10 @@ jobs:
         node: [16.13.0]
 
     steps:
-      - name: Download dist artifact ⏬
+      - name: Download build artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: dist
+          name: build-artifact
           path: dist
 
       - name: Upload FTP 🚀
