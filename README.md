@@ -35,6 +35,10 @@ $ npm run dev
 $ npm run generate
 ```
 
+## Requirements
+
+- Node 16 + its npm
+
 ## Deploy
 
 Push to `main`.
