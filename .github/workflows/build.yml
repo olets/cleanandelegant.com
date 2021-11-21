@@ -3,7 +3,7 @@ name: build
 on:
   workflow_call:
   push:
-    branches: [ '*', '!main' ]
+    branches-ignore: main
 
 jobs:
   build:
