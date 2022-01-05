@@ -17,7 +17,7 @@
     <h1 class="mb-4 font-serif text-4xl text-slate-500">Henry Bley-Vroman</h1>
 
     <div class="inline-block text-2xl leading-loose uppercase text-slate-400">
-      Front-End Developer at <a class="underline transition-all focus:text-blue-400 hover:text-blue-400 decoration-blue-400" href="https://www.viget.com/work/">Viget</a>
+      Senior Front-End Developer at <a class="underline transition-all focus:text-blue-400 hover:text-blue-400 decoration-blue-400" href="https://www.viget.com/work/">Viget</a>
 
       <span class="w-48 w-3/4 mx-auto mt-6 mb-12 h-1.5 block bg-maroon-400"></span>
     </div>
