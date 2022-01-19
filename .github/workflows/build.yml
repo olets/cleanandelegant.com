@@ -7,30 +7,17 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [16.13.0]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v2.4.0
 
-      - name: Setup node env 🏗
+      - name: Setup node env and cache dependencies 🏗
         uses: actions/setup-node@v2.5.1
         with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
-
-      - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.7
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version-file: '.node-version'
+          cache: npm
 
       - name: Install dependencies 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
