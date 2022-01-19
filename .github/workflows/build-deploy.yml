@@ -11,12 +11,10 @@ jobs:
   deploy:
     needs: use-build
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node: [16.13.0]
 
     steps:
       - name: Download build artifact ⏬
