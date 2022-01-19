@@ -13,9 +13,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-
     steps:
       - name: Download build artifact ⏬
         uses: actions/download-artifact@v2
