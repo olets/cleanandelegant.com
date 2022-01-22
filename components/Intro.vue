@@ -3,15 +3,15 @@
     <p>
       Interface-focused full stack developer.
 
-      I work on <Em>Node, PHP, and Rails stacks</Em>
-      to create <Em>accessible responsive front ends</Em> for sites small and large,
-      <Em>CMS-backed</Em> or not.
+      I work on <EmComponent>Node, PHP, and Rails stacks</EmComponent>
+      to create <EmComponent>accessible responsive front ends</EmComponent> for sites small and large,
+      <EmComponent>CMS-backed</EmComponent> or not.
 
-      I think about <Em>information architecture</Em> and <Em>presentation</Em>,
-      <Em>mentorship</Em> and <Em>coaching</Em>,
-      <Em>team strength</Em> and <Em>collaboration</Em>.
+      I think about <EmComponent>information architecture</EmComponent> and <EmComponent>presentation</EmComponent>,
+      <EmComponent>mentorship</EmComponent> and <EmComponent>coaching</EmComponent>,
+      <EmComponent>team strength</EmComponent> and <EmComponent>collaboration</EmComponent>.
 
-      Co-chair of Viget's <Em>Diversity, Equity, and Inclusion</Em> Advisory Committee.
+      Co-chair of Viget's <EmComponent>Diversity, Equity, and Inclusion</EmComponent> Advisory Committee.
 
       Fiddle player. Woodturner. Lover of early 20th century clay-court croquet.
     </p>
