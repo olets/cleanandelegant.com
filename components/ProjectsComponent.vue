@@ -5,7 +5,7 @@
     :summary="summary"
     :theme-color="themeColor"
   >
-    <TableRow
+    <TableRowComponent
       v-for="(record, i) in table"
       :key="i"
       :index="i"
@@ -37,7 +37,7 @@
       <TableDataCellComponent>
         <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
       </TableDataCellComponent>
-    </TableRow>
+    </TableRowComponent>
   </TableSection>
 </template>
 

@@ -5,7 +5,7 @@
     :summary="summary"
     :theme-color="themeColor"
   >
-    <TableRow
+    <TableRowComponent
       v-for="(record, i) in table"
       :key="i"
       :index="i"
@@ -45,7 +45,7 @@
       <TableDataCellComponent>
         <YearRange v-if="record.When" :years="record.When"></YearRange>
       </TableDataCellComponent>
-    </TableRow>
+    </TableRowComponent>
   </TableSection>
 </template>
 

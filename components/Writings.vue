@@ -5,7 +5,7 @@
     :summary="summary"
     :theme-color="themeColor"
   >
-    <TableRow
+    <TableRowComponent
       v-for="(record, i) in table"
       :key="i"
       :index="i"
@@ -33,7 +33,7 @@
       <TableDataCellComponent>
         {{ record.Year}}
       </TableDataCellComponent>
-    </TableRow>
+    </TableRowComponent>
   </TableSection>
 </template>
 
