@@ -6,7 +6,7 @@
       <li v-for="(link, index) in links"
             :key="index"
             class="my-2">
-        <IconLink v-bind="link"></IconLink>
+        <IconLinkComponent v-bind="link"></IconLinkComponent>
       </li>
     </ul>
   </div>
