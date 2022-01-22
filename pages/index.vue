@@ -5,7 +5,7 @@
     <main class="">
       <IntroComponent></IntroComponent>
 
-      <Sites></Sites>
+      <SitesComponent></SitesComponent>
 
       <ProjectsComponent></ProjectsComponent>
 
