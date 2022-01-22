@@ -43,7 +43,7 @@
       </TableDataCellComponent>
 
       <TableDataCellComponent>
-        <YearRange v-if="record.When" :years="record.When"></YearRange>
+        <YearRangeComponent v-if="record.When" :years="record.When"></YearRangeComponent>
       </TableDataCellComponent>
     </TableRowComponent>
   </TableSectionComponent>
