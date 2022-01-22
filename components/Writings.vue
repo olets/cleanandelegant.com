@@ -27,7 +27,7 @@
       </TableDataCellComponent>
 
       <TableDataCellComponent>
-        <TagList :tags="toArray(record.Topics)" :possible-tags="topics"></TagList>
+        <TagListComponent :tags="toArray(record.Topics)" :possible-tags="topics"></TagListComponent>
       </TableDataCellComponent>
 
       <TableDataCellComponent>

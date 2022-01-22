@@ -31,15 +31,15 @@
       </TableDataCellComponent>
 
       <TableDataCellComponent>
-        <TagList :tags="toArray(record.Roles)" :possible-tags="roles"></TagList>
+        <TagListComponent :tags="toArray(record.Roles)" :possible-tags="roles"></TagListComponent>
       </TableDataCellComponent>
 
       <TableDataCellComponent>
-        <TagList :tags="toArray(record.Type)" :possible-tags="types"></TagList>
+        <TagListComponent :tags="toArray(record.Type)" :possible-tags="types"></TagListComponent>
       </TableDataCellComponent>
 
       <TableDataCellComponent>
-        <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
+        <TagListComponent :tags="toArray(record.Tech)" :possible-tags="techs"></TagListComponent>
       </TableDataCellComponent>
 
       <TableDataCellComponent>
