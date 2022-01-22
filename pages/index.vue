@@ -26,7 +26,7 @@
       </section>
     </main>
 
-    <Footer></Footer>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
