@@ -1,16 +1,16 @@
 <template>
-  <TableSection
+  <TableSectionComponent
     :column-headings="columnHeadings"
     :heading="heading"
     :summary="summary"
     :theme-color="themeColor"
   >
-    <TableRow
+    <TableRowComponent
       v-for="(record, i) in table"
       :key="i"
       :index="i"
     >
-      <TableDataCell>
+      <TableDataCellComponent>
         <a
           v-if="record.Link"
           :href="record.Link"
@@ -28,17 +28,17 @@
 
           <p v-if="record.Description">{{ record.Description }}</p>
         </div>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Type)" :possible-tags="types"></TagList>
-      </TableDataCell>
+      <TableDataCellComponent>
+        <TagListComponent :tags="toArray(record.Type)" :possible-tags="types"></TagListComponent>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
-      </TableDataCell>
-    </TableRow>
-  </TableSection>
+      <TableDataCellComponent>
+        <TagListComponent :tags="toArray(record.Tech)" :possible-tags="techs"></TagListComponent>
+      </TableDataCellComponent>
+    </TableRowComponent>
+  </TableSectionComponent>
 </template>
 
 <script setup>

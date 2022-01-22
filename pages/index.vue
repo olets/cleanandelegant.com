@@ -1,32 +1,32 @@
 <template>
   <div class="max-w-5xl px-6 mx-auto my-20 antialiased leading-loose text-slate-500">
-    <Header></Header>
+    <HeaderComponent></HeaderComponent>
 
     <main class="">
-      <Intro></Intro>
+      <IntroComponent></IntroComponent>
 
-      <Sites></Sites>
+      <SitesComponent></SitesComponent>
 
-      <Projects></Projects>
+      <ProjectsComponent></ProjectsComponent>
 
-      <Writings></Writings>
+      <WritingsComponent></WritingsComponent>
 
       <section>
         <h2 class="sr-only">Links</h2>
 
         <div class="grid-cols-3 leading-relaxed sm:grid mb-14">
           <div>
-            <IconLinkList v-bind="linkLists[0]"></IconLinkList>
+            <IconLinkComponentList v-bind="linkLists[0]"></IconLinkComponentList>
 
-            <IconLinkList v-bind="linkLists[1]"></IconLinkList>
+            <IconLinkComponentList v-bind="linkLists[1]"></IconLinkComponentList>
           </div>
 
-          <IconLinkList v-bind="linkLists[2]"></IconLinkList>
+          <IconLinkComponentList v-bind="linkLists[2]"></IconLinkComponentList>
         </div>
       </section>
     </main>
 
-    <Footer></Footer>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 

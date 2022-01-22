@@ -1,16 +1,16 @@
 <template>
-  <TableSection
+  <TableSectionComponent
     :column-headings="columnHeadings"
     :heading="heading"
     :summary="summary"
     :theme-color="themeColor"
   >
-    <TableRow
+    <TableRowComponent
       v-for="(record, i) in table"
       :key="i"
       :index="i"
     >
-      <TableDataCell>
+      <TableDataCellComponent>
         <a
           v-if="record.Link"
           :href="record.Link"
@@ -28,25 +28,25 @@
 
           <div v-if="record.Description" class="whitespace-nowrap">({{ record.Description }})</div>
         </div>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Roles)" :possible-tags="roles"></TagList>
-      </TableDataCell>
+      <TableDataCellComponent>
+        <TagListComponent :tags="toArray(record.Roles)" :possible-tags="roles"></TagListComponent>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Type)" :possible-tags="types"></TagList>
-      </TableDataCell>
+      <TableDataCellComponent>
+        <TagListComponent :tags="toArray(record.Type)" :possible-tags="types"></TagListComponent>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
-      </TableDataCell>
+      <TableDataCellComponent>
+        <TagListComponent :tags="toArray(record.Tech)" :possible-tags="techs"></TagListComponent>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <YearRange v-if="record.When" :years="record.When"></YearRange>
-      </TableDataCell>
-    </TableRow>
-  </TableSection>
+      <TableDataCellComponent>
+        <YearRangeComponent v-if="record.When" :years="record.When"></YearRangeComponent>
+      </TableDataCellComponent>
+    </TableRowComponent>
+  </TableSectionComponent>
 </template>
 
 <script setup>

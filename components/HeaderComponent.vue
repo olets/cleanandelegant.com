@@ -1,13 +1,15 @@
 <template>
   <header class="text-center">
     <div class="relative inline-block mb-10 overflow-hidden rounded-full bg-slate-300 group h-44 w-44">
-      <nuxt-img alt="Henry Bley-Vroman headshot"
+      <nuxt-img
+            alt="Henry Bley-Vroman headshot"
             class="block"
             height="176"
             src="/images/portrait.jpg"
             width="176" />
 
-      <nuxt-img alt=""
+      <nuxt-img
+            alt=""
             class="absolute top-0 left-0 block w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
             height="176"
             src="/images/portrait-fun.jpg"

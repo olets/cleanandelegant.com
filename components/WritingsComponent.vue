@@ -1,16 +1,16 @@
 <template>
-  <TableSection
+  <TableSectionComponent
     :column-headings="columnHeadings"
     :heading="heading"
     :summary="summary"
     :theme-color="themeColor"
   >
-    <TableRow
+    <TableRowComponent
       v-for="(record, i) in table"
       :key="i"
       :index="i"
     >
-      <TableDataCell>
+      <TableDataCellComponent>
         <a
           v-if="getUrl(record)"
           :href="getUrl(record)"
@@ -24,17 +24,17 @@
         <div v-else>
           {{ record.Title }}
         </div>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
-        <TagList :tags="toArray(record.Topics)" :possible-tags="topics"></TagList>
-      </TableDataCell>
+      <TableDataCellComponent>
+        <TagListComponent :tags="toArray(record.Topics)" :possible-tags="topics"></TagListComponent>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         {{ record.Year}}
-      </TableDataCell>
-    </TableRow>
-  </TableSection>
+      </TableDataCellComponent>
+    </TableRowComponent>
+  </TableSectionComponent>
 </template>
 
 <script setup>
