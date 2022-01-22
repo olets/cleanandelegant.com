@@ -1,5 +1,5 @@
 <template>
-  <TableSection
+  <TableSectionComponent
     :column-headings="columnHeadings"
     :heading="heading"
     :summary="summary"
@@ -34,7 +34,7 @@
         {{ record.Year}}
       </TableDataCellComponent>
     </TableRowComponent>
-  </TableSection>
+  </TableSectionComponent>
 </template>
 
 <script setup>

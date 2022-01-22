@@ -1,5 +1,5 @@
 <template>
-  <TableSection
+  <TableSectionComponent
     :column-headings="columnHeadings"
     :heading="heading"
     :summary="summary"
@@ -38,7 +38,7 @@
         <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
       </TableDataCellComponent>
     </TableRowComponent>
-  </TableSection>
+  </TableSectionComponent>
 </template>
 
 <script setup>

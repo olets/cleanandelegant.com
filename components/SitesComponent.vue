@@ -1,5 +1,5 @@
 <template>
-  <TableSection
+  <TableSectionComponent
     :column-headings="columnHeadings"
     :heading="heading"
     :summary="summary"
@@ -46,7 +46,7 @@
         <YearRange v-if="record.When" :years="record.When"></YearRange>
       </TableDataCellComponent>
     </TableRowComponent>
-  </TableSection>
+  </TableSectionComponent>
 </template>
 
 <script setup>
