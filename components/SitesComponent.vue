@@ -10,7 +10,7 @@
       :key="i"
       :index="i"
     >
-      <TableDataCell>
+      <TableDataCellComponent>
         <a
           v-if="record.Link"
           :href="record.Link"
@@ -28,23 +28,23 @@
 
           <div v-if="record.Description" class="whitespace-nowrap">({{ record.Description }})</div>
         </div>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <TagList :tags="toArray(record.Roles)" :possible-tags="roles"></TagList>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <TagList :tags="toArray(record.Type)" :possible-tags="types"></TagList>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <YearRange v-if="record.When" :years="record.When"></YearRange>
-      </TableDataCell>
+      </TableDataCellComponent>
     </TableRow>
   </TableSection>
 </template>

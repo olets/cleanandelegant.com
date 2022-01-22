@@ -10,7 +10,7 @@
       :key="i"
       :index="i"
     >
-      <TableDataCell>
+      <TableDataCellComponent>
         <a
           v-if="getUrl(record)"
           :href="getUrl(record)"
@@ -24,15 +24,15 @@
         <div v-else>
           {{ record.Title }}
         </div>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <TagList :tags="toArray(record.Topics)" :possible-tags="topics"></TagList>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         {{ record.Year}}
-      </TableDataCell>
+      </TableDataCellComponent>
     </TableRow>
   </TableSection>
 </template>

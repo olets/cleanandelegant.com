@@ -10,7 +10,7 @@
       :key="i"
       :index="i"
     >
-      <TableDataCell>
+      <TableDataCellComponent>
         <a
           v-if="record.Link"
           :href="record.Link"
@@ -28,15 +28,15 @@
 
           <p v-if="record.Description">{{ record.Description }}</p>
         </div>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <TagList :tags="toArray(record.Type)" :possible-tags="types"></TagList>
-      </TableDataCell>
+      </TableDataCellComponent>
 
-      <TableDataCell>
+      <TableDataCellComponent>
         <TagList :tags="toArray(record.Tech)" :possible-tags="techs"></TagList>
-      </TableDataCell>
+      </TableDataCellComponent>
     </TableRow>
   </TableSection>
 </template>
