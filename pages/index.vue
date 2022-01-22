@@ -3,7 +3,7 @@
     <HeaderComponent></HeaderComponent>
 
     <main class="">
-      <Intro></Intro>
+      <IntroComponent></IntroComponent>
 
       <Sites></Sites>
 
