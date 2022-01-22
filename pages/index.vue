@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-5xl px-6 mx-auto my-20 antialiased leading-loose text-slate-500">
-    <Header></Header>
+    <HeaderComponent></HeaderComponent>
 
     <main class="">
       <Intro></Intro>
