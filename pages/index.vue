@@ -9,7 +9,7 @@
 
       <ProjectsComponent></ProjectsComponent>
 
-      <Writings></Writings>
+      <WritingsComponent></WritingsComponent>
 
       <section>
         <h2 class="sr-only">Links</h2>
