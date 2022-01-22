@@ -7,7 +7,7 @@
 
       <Sites></Sites>
 
-      <Projects></Projects>
+      <ProjectsComponent></ProjectsComponent>
 
       <Writings></Writings>
 
