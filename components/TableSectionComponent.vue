@@ -4,7 +4,9 @@
       <div class="inline-block text-xl uppercase text-slate-400">
         <h2>{{ heading }}</h2>
 
-        <span :class="`bg-${themeColor}-700 block w-3/4 opacity-50 h-1.5 w-48 mx-auto mt-6 mb-12`"></span>
+        <span
+          :class="`bg-${themeColor}-700 mx-auto mt-6 mb-12 block h-1.5 w-3/4 w-48 opacity-50`"
+        ></span>
       </div>
     </div>
 
@@ -13,7 +15,9 @@
     </p>
 
     <div class="relative border min-h-60">
-      <div class="absolute -ml-6 -mt-6 left-1/2 top-1/2 mt-0.5 animate-spin animation-duration-2s border-[6px] border-gray-300 border-r-blue-400 h-12 rounded-full w-12"></div>
+      <div
+        class="absolute left-1/2 top-1/2 -ml-6 -mt-6 mt-0.5 h-12 w-12 animate-spin rounded-full border-[6px] border-gray-300 border-r-blue-400 animation-duration-2s"
+      ></div>
 
       <div class="relative w-full">
         <div class="overflow-x-auto">
@@ -35,32 +39,34 @@
           </table>
         </div>
 
-        <div class="absolute top-0 right-0 w-40 h-full bg-gradient-to-r from-white/0 to-white"></div>
+        <div
+          class="absolute top-0 right-0 w-40 h-full bg-gradient-to-r from-white/0 to-white"
+        ></div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-  export default {
-    props: {
-      columnHeadings: {
-        type: Array,
-        required: true,
-      },
-      heading: {
-        type: String,
-        required: true,
-      },
-      summary: {
-        type: String,
-        required: false,
-        default: '',
-      },
-      themeColor: {
-        type: String,
-        required: true,
-      },
+export default {
+  props: {
+    columnHeadings: {
+      type: Array,
+      required: true,
     },
-  }
+    heading: {
+      type: String,
+      required: true,
+    },
+    summary: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    themeColor: {
+      type: String,
+      required: true,
+    },
+  },
+}
 </script>
