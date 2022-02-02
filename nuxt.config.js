@@ -28,7 +28,6 @@ export default {
       {
         src: 'https://rewarding-tea.cleanandelegant.com/script.js',
         'data-site': 'CYXOSZDQ',
-        'data-spa': 'auto',
         defer: true,
       },
     ]
