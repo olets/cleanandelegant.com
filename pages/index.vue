@@ -18,16 +18,16 @@
 
         <div class="grid-cols-3 leading-relaxed mb-14 sm:grid">
           <div>
-            <IconLinkComponentList
+            <IconLinkListComponent
               v-bind="linkLists[0]"
-            ></IconLinkComponentList>
+            ></IconLinkListComponent>
 
-            <IconLinkComponentList
+            <IconLinkListComponent
               v-bind="linkLists[1]"
-            ></IconLinkComponentList>
+            ></IconLinkListComponent>
           </div>
 
-          <IconLinkComponentList v-bind="linkLists[2]"></IconLinkComponentList>
+          <IconLinkListComponent v-bind="linkLists[2]"></IconLinkListComponent>
         </div>
       </section>
     </main>
