@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "core-js": "^3.21.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "prettier-plugin-tailwindcss": "^0.1.8"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
