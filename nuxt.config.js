@@ -24,14 +24,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
-    script: [
-      {
-        src: 'https://rewarding-tea.cleanandelegant.com/script.js',
-        'data-site': 'CYXOSZDQ',
-        'data-spa': 'auto',
-        defer: true,
-      },
-    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
