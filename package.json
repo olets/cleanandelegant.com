@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@ubclaunchpad/vue-fathom": "^2.0.0",
-    "core-js": "^3.21.1",
+    "core-js": "^3.27.0",
     "nuxt": "^2.15.7",
     "prettier-plugin-tailwindcss": "^0.1.8"
   },
