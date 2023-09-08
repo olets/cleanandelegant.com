@@ -7,12 +7,6 @@
     <main class="">
       <IntroComponent></IntroComponent>
 
-      <SitesComponent></SitesComponent>
-
-      <ProjectsComponent></ProjectsComponent>
-
-      <WritingsComponent></WritingsComponent>
-
       <section>
         <h2 class="sr-only">Links</h2>
 
