@@ -6,7 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     siteID: "CYXOSZDQ",
     settings: {
       spa: "history",
-      url: "https://rewarding-tea.cleanandelegant.com/script.js",
+      url: "https://cdn.usefathom.com/script.js",
     },
   });
 });
