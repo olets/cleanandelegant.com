@@ -51,11 +51,23 @@
             </p>
 
             <p>Find articles, social media, client sites, and open source projects at
-              <a href="https://olets.dev">olets.dev</a>.</p>
+              <a href="https://olets.dev" data-track="homepage|bio|oletsdev">olets.dev</a>.</p>
           </section>
         </div>
       </div>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
+
+  <script>
+    const trackAttr = 'data-track'
+
+    document.querySelectorAll(`[${trackAttr}]`).forEach(el => {
+      const trackVal = el.getAttribute(trackAttr)
+
+      el.addEventListener('click', (e) => {
+        window.fathom.trackGoal(trackVal, 0);
+      });
+    });
+  </script>
 </html>
