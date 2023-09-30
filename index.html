@@ -57,17 +57,36 @@
       </div>
     </main>
     <script type="module" src="/main.js"></script>
+
+    <script>
+      function track() {
+        // "if not dev mode"
+        // https://vitejs.dev/guide/env-and-mode.html#html-env-replacement
+        if (%DEV% && !window.fathom) {
+          console.log('Fathom not found')
+          return
+        }
+
+        const attr = 'data-track'
+
+        document.querySelectorAll(`[${attr}]`).forEach(el => {
+          const str = el.getAttribute(attr)
+
+          const hash = Array.from(str)
+            .map((char) => {
+              const charCode = char.charCodeAt(0)
+              const ret =  String(charCode - 96).padStart(2, '0')
+              return ret
+            })
+            .reduce((acc, cur) => acc + cur, '')
+
+          el.addEventListener('click', (e) => {
+            window.fathom.trackGoal('PBK7VIV7', `99${hash}`);
+          });
+        });
+      }
+
+      track()
+    </script>
   </body>
-
-  <script>
-    const trackAttr = 'data-track'
-
-    document.querySelectorAll(`[${trackAttr}]`).forEach(el => {
-      const trackVal = el.getAttribute(trackAttr)
-
-      el.addEventListener('click', (e) => {
-        window.fathom.trackGoal(trackVal, 0);
-      });
-    });
-  </script>
 </html>
