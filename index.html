@@ -51,7 +51,7 @@
             </p>
 
             <p>Find articles, social media, client sites, and open source projects at
-              <a href="https://olets.dev" data-track="homepage|bio|oletsdev">olets.dev</a>.</p>
+              <a href="https://olets.dev" data-fathom="VIAULZZN">olets.dev</a>.</p>
           </section>
         </div>
       </div>
@@ -60,28 +60,11 @@
 
     <script>
       function track() {
-        // "if not dev mode"
-        // https://vitejs.dev/guide/env-and-mode.html#html-env-replacement
-        if (%DEV% && !window.fathom) {
-          console.log('Fathom not found')
-          return
-        }
-
-        const attr = 'data-track'
+        const attr = 'data-fathom'
 
         document.querySelectorAll(`[${attr}]`).forEach(el => {
-          const str = el.getAttribute(attr)
-
-          const hash = Array.from(str)
-            .map((char) => {
-              const charCode = char.charCodeAt(0)
-              const ret =  String(charCode - 96).padStart(2, '0')
-              return ret
-            })
-            .reduce((acc, cur) => acc + cur, '')
-
           el.addEventListener('click', (e) => {
-            window.fathom.trackGoal('PBK7VIV7', `99${hash}`);
+            window.fathom.trackGoal(el.getAttribute(attr), 0);
           });
         });
       }
