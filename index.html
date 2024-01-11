@@ -39,20 +39,31 @@
     <main class="container max-w-lg mx-auto">
       <div class="px-5">
         <div class="grid min-h-screen m-auto items-center">
-          <section class="space-y-6">
-            <div class="space-y-3">
+          <div class="space-y-6">
+            <section class="space-y-3">
               <h1 class="text-2xl">Henry Bley-Vroman</h1>
 
-              <p class="text-xl">Experienced broad-stack UI developer</p>
-            </div>
+              <p class="text-xl">Experienced broad-stack developer of accessible UIs; dev team lead; DEI advocate</p>
+            </section>
 
-            <p>
-              I build things you see on the web, create tools to improve other builders' daily experience, teach and mentor at work and in the tech community, and strive to support safe, kind, fair, and welcoming cultures. Fiddle and concertina player. Wa‘a racer. Lover of early 20th century clay-court croquet.
-            </p>
+            <section>
+              <h2 class="sr-only">Bio</h2>
 
-            <p>Find articles, social media, client sites, and open source projects at
-              <a href="https://olets.dev" data-fathom="VIAULZZN">olets.dev</a>.</p>
-          </section>
+              <p>I build things you see on the web, create tools to improve other builders' daily experience, teach and mentor at work and in the tech community, and strive to support safe, kind, fair, and welcoming cultures. Fiddle and concertina player. Wa‘a racer. Lover of early 20th century clay-court croquet.</p>
+            </section>
+
+            <section>
+              <h2 class="sr-only">Contact</h2>
+
+              <ul class="space-y-3">
+                <li>You can reach me <a href="mailto:olets@olets.dev">by email</a> or <a href="https://hachyderm.io/@olets">on Mastodon</a>.</li>
+
+                <li>
+                  Find articles, social media, client sites, and open source projects at <a href="https://olets.dev" data-track="homepage|bio|oletsdev">olets.dev</a>.
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </main>
@@ -60,11 +71,28 @@
 
     <script>
       function track() {
-        const attr = 'data-fathom'
+        // "if not dev mode"
+        // https://vitejs.dev/guide/env-and-mode.html#html-env-replacement
+        if (%DEV% && !window.fathom) {
+          console.log('Fathom not found')
+          return
+        }
+
+        const attr = 'data-track'
 
         document.querySelectorAll(`[${attr}]`).forEach(el => {
+          const str = el.getAttribute(attr)
+
+          const hash = Array.from(str)
+            .map((char) => {
+              const charCode = char.charCodeAt(0)
+              const ret =  String(charCode - 96).padStart(2, '0')
+              return ret
+            })
+            .reduce((acc, cur) => acc + cur, '')
+
           el.addEventListener('click', (e) => {
-            window.fathom.trackGoal(el.getAttribute(attr), 0);
+            window.fathom.trackGoal('PBK7VIV7', `99${hash}`);
           });
         });
       }

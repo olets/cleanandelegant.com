@@ -12,12 +12,11 @@ export default {
   plugins: [
     plugin(function({ addBase, addUtilities }) {
       addBase({
-        p: {
-          a: {
-            '@apply text-link': {},
-          },
-        }
+        a: {
+          '@apply text-link': {},
+        },
       });
+
       addUtilities({
         '.text-link': {
           '@apply underline text-blue-500 transition-colors focus-visible:text-blue-400 hover:text-blue-400': {},
